@@ -1,8 +1,11 @@
 # Music Visualiser Project
 
-Name:
-
-Student Number: 
+| Student ID | Student Name |
+|-----------|-----------|
+| C22300773 | Aidan McPhee |
+| C22386221 | Kimberly Libranza |
+| C22408466 | Eilish Paseos |
+| C22363431 | Jana Sy |
 
 ## Instructions
 - Fork this repository and use it a starter project for your assignment
