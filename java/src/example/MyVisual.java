@@ -1,10 +1,13 @@
 package example;
 
+import C22300773.aidansvisual;
 import ie.tudublin.*;
 
 public class MyVisual extends Visual {
     WaveForm wf;
     AudioBandsVisual abv;
+
+    aidansvisual av;
 
     public void settings() {
         size(1024, 500);
@@ -13,7 +16,7 @@ public class MyVisual extends Visual {
         // fullScreen();
 
         // Use this to make fullscreen and use P3D for 3D graphics
-        // fullScreen(P3D, SPAN);
+        fullScreen(P3D, SPAN);
     }
 
     public void setup() {
@@ -27,6 +30,7 @@ public class MyVisual extends Visual {
 
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
+        av = new aidansvisual();
     }
 
     public void keyPressed() {
@@ -49,7 +53,8 @@ public class MyVisual extends Visual {
 
         // Call this is you want to get the average amplitude
         calculateAverageAmplitude();
-        wf.render();
-        abv.render();
+        //wf.render();
+        //abv.render();
+        av.SpinningSphere(width, height, this, getSmoothedAmplitude());
     }
 }
