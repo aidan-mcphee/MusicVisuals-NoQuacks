@@ -1,9 +1,17 @@
 package example;
 
 import ie.tudublin.Visual;
+import ddf.minim.AudioBuffer;
+import ddf.minim.AudioInput;
+import ddf.minim.AudioPlayer;
+import ddf.minim.Minim;
+
 
 public class CubeVisual1 extends Visual
 {
+    Minim minim;
+    AudioPlayer player;
+    AudioBuffer buffer;
     public void settings()
     {
         size(800, 600, P3D);
@@ -13,19 +21,27 @@ public class CubeVisual1 extends Visual
     public void setup()
     {
         startMinim();
-        //startListening();
-        loadAudio("heroplanet.mp3");
+        startListening();
+        //loadAudio("heroplanet.mp3");
+
+        minim = new Minim(this);
+        player = minim.loadFile("data/Creepy Nuts - Bling-Bang-Bang-Born.mp3");
+        player.play();
+        buffer = player.mix;
+
         colorMode(HSB);
     }
 
+    /*
     public void keyPressed()
     {
         if (key == ' ')
         {
-            getAudioPlayer().cue(0);
-            getAudioPlayer().play();
+            //getAudioPlayer().cue(0);
+            //getAudioPlayer().play();
+            player.play();
         }
-    }
+    } */
 
     float angle = 0;
 
