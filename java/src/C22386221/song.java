@@ -21,12 +21,7 @@ public class song extends Visual{
         loadAudio("data/Creepy Nuts - Bling-Bang-Bang-Born.mp3");
         getAudioPlayer().play();
         PFont font = createFont("Cabazon.otf", 200);
-        //pg = createGraphics(1600, 900, P3D);
-
-        Kim = new KimsVisual(this);
-        Kim.setFont(font);
-        Kim.setup();
-        
+        Kim = new KimsVisual(this, font);
     }   
 
     public void keyPressed(){
