@@ -5,6 +5,7 @@ import example.CubeVisual;
 import example.CubeVisual1;
 import example.MyVisual;
 import example.RotatingAudioBands;
+import main.song;
 import C22386221.*;
 
 public class Main {

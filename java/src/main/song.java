@@ -1,5 +1,6 @@
-package C22386221;
+package main;
 
+import C22386221.KimsVisual;
 import ie.tudublin.Visual;
 import processing.core.PFont;
 

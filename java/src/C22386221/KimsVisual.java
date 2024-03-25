@@ -1,6 +1,7 @@
 package C22386221;
 
 import ie.tudublin.Visual;
+import main.song;
 import processing.core.PFont;
 
 public class KimsVisual extends Visual{
@@ -14,6 +15,7 @@ public class KimsVisual extends Visual{
     public KimsVisual(song s){
         this.s = s;
     }
+
     public void setup() {
         this.w = s.width;
         this.h = s.height;
