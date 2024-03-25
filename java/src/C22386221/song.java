@@ -2,21 +2,18 @@ package C22386221;
 
 import ie.tudublin.Visual;
 import processing.core.PFont;
-import processing.core.PGraphics;
 
 public class song extends Visual{
-    PGraphics pg;
     KimsVisual Kim; 
 
     public void settings(){
-        size(1600, 900, P3D);
+        size(1920, 1080, P3D);
     }
     
     public void setup()
     {
         //super.setup();
         colorMode(HSB);
-        
         setFrameSize(1024);
         frameRate(30);
         
@@ -24,7 +21,7 @@ public class song extends Visual{
         loadAudio("data/Creepy Nuts - Bling-Bang-Bang-Born.mp3");
         getAudioPlayer().play();
         PFont font = createFont("Cabazon.otf", 200);
-        pg = createGraphics(1600, 900, P3D);
+        //pg = createGraphics(1600, 900, P3D);
 
         Kim = new KimsVisual(this);
         Kim.setFont(font);
@@ -46,10 +43,6 @@ public class song extends Visual{
         }
     
     public void draw(){
-        pg.beginDraw();
-        pg.background(0);
-        Kim.play(pg);
-        pg.endDraw();
-        image(pg, 0, 0);
+        Kim.play();
     }
 }
