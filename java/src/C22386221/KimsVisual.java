@@ -1,6 +1,7 @@
 package C22386221;
 
 import ie.tudublin.Visual;
+import main.song;
 import processing.core.PFont;
 
 public class KimsVisual extends Visual{
@@ -48,7 +49,7 @@ public class KimsVisual extends Visual{
         s.fill(255);
         s.textFont(font);
         s.textAlign(LEFT,CENTER);
-        
+
         s.text("Bling", x, y);   
         if(x - 0 < 100){
             x = 0;
