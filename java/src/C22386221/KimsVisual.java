@@ -13,6 +13,7 @@ public class KimsVisual extends Visual{
     float x2;
     float x3;
     int fontSize = 128;
+    SlidingText bling;
     
     public KimsVisual(song s, PFont font){
         this.s = s;
@@ -22,6 +23,7 @@ public class KimsVisual extends Visual{
         x = w;
         x2 = w;
         x3 = w;
+        bling = new SlidingText(s,"Test", w, h/12, 10, 0);
     }
     
     public void play(){
@@ -39,6 +41,7 @@ public class KimsVisual extends Visual{
             UpperTextAnimation();
         }
         
+        bling.Render();
         //System.out.println(s.textWidth("Bling"));
     }
     
@@ -50,27 +53,30 @@ public class KimsVisual extends Visual{
         s.textFont(font);
         s.textAlign(LEFT,CENTER);
 
-        s.text("Bling", x, y);   
-        if(x - 0 < 100){
+        s.text("Bling", x, y);
+        //Checks if x position overlaps with screen edge and stops, if not move left   
+        if(x - 0 < 200){
             x = 0;
         }else{
-            x-=100;
+            x-=200;
         }
         
         float offset1 = s.textWidth("Bling");
-        s.text("Bang", x2, y);   
-        if(x2 - offset1 < 100){
+        s.text("Bang", x2, y);
+        //Checks if x position overlaps with first word (offset) and stops, if not move left     
+        if(x2 - offset1 < 200){
             x2 = offset1;
         }else{
-            x2-=100;
+            x2-=200;
         }
         
         float offset2 = s.textWidth("Bang");
-        s.text("Bang", x3, y);   
-        if(x3 - (offset1 + offset2) < 100){
+        s.text("Bang", x3, y);
+        //Checks if x position overlaps with first 2 words (offset) and stops, if not move left   
+        if(x3 - (offset1 + offset2) < 200){
             x3 = offset1 + offset2;
         }else{
-            x3-=100;
+            x3-=200;
         }
         
     }
