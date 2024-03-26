@@ -1,11 +1,13 @@
 package main;
 
+import C22300773.AidansVisual;
 import C22386221.KimsVisual;
 import ie.tudublin.Visual;
 import processing.core.PFont;
 
 public class song extends Visual{
     KimsVisual Kim; 
+    AidansVisual Aidan;
 
     public void settings(){
         size(1920, 1080, P3D);
@@ -28,6 +30,7 @@ public class song extends Visual{
         Kim.setFont(font);
         Kim.setup();
         
+        Aidan = new AidansVisual(this);
     }   
 
     public void keyPressed(){
@@ -41,9 +44,15 @@ public class song extends Visual{
         if(keyCode == '0'){
             getAudioPlayer().rewind();
         }
-        }
+    }
+
+    private void playMusicVideo() {
+        //Aidan.SpinningSphere(width, height, 1.0f);
+        Kim.play();
+    }
     
     public void draw(){
-        Kim.play();
+        background(0);
+        playMusicVideo();
     }
 }
