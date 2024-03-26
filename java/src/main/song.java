@@ -24,14 +24,15 @@ public class song extends Visual{
         loadAudio("data/Creepy Nuts - Bling-Bang-Bang-Born.mp3");
         getAudioPlayer().play();
         PFont font = createFont("Cabazon.otf", 200);
+        PFont calibri = createFont("calibri-regular.ttf", 100);
         //pg = createGraphics(1600, 900, P3D);
 
         Kim = new KimsVisual(this);
         Kim.setFont(font);
         Kim.setup();
         
-        Aidan = new AidansVisual(this);
-    }   
+        Aidan = new AidansVisual(this, calibri);
+    }
 
     public void keyPressed(){
         if(keyCode == ' ') {
@@ -48,7 +49,10 @@ public class song extends Visual{
 
     private void playMusicVideo() {
         //Aidan.SpinningSphere(width, height, 1.0f);
+        String[] vars = {"Width", "height", "Amplitude"};
+        String[] vals = {Integer.toString(width), Integer.toString(height), Float.toString(getSmoothedAmplitude())};
         Kim.play();
+        Aidan.printVars(vars, vals);
     }
     
     public void draw(){
