@@ -27,9 +27,7 @@ public class song extends Visual{
         PFont calibri = createFont("calibri-regular.ttf", 100);
         //pg = createGraphics(1600, 900, P3D);
 
-        Kim = new KimsVisual(this);
-        Kim.setFont(font);
-        Kim.setup();
+        Kim = new KimsVisual(this, font);
         
         Aidan = new AidansVisual(this, calibri);
     }
