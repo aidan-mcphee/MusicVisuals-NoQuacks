@@ -15,6 +15,7 @@ public class KimsVisual extends Visual{
     int fontSize = 128;
     SlidingText bling, bang, bang2;
     SlidingText rBling, rBang, rBang2;
+    DancingStickman stickman;
     
     public KimsVisual(song s, PFont font){
         this.s = s;
@@ -32,6 +33,8 @@ public class KimsVisual extends Visual{
         rBling = new SlidingText(s,"Bling", font, 0, h - h/9, 200, x - (394 + 389));
         rBang = new SlidingText(s, "Bang", font, 0, h - h/9, 200, x - 394);
         rBang2 = new SlidingText(s,"Bang", font, 0, h - h/9, 200, x);
+
+        stickman = new DancingStickman(s, w/4,h/4);
     }
     
     public void play(){
@@ -46,7 +49,6 @@ public class KimsVisual extends Visual{
         s.rect(0, h, w, -h/5);
         
         if (m >= 1000){
-            //UpperTextAnimation();
             bling.SlideLeft();
             bang.SlideLeft();
             bang2.SlideLeft();
@@ -55,43 +57,9 @@ public class KimsVisual extends Visual{
             rBang.SlideRight();
             rBang2.SlideRight();
         }
+
+        stickman.render();
         
         //System.out.println(s.textWidth("Bang"));
     }
-    
-    /*public void UpperTextAnimation(){
-        float y = h/12;
-
-        s.textSize(fontSize);    
-        s.fill(255);
-        s.textFont(font);
-        s.textAlign(LEFT,CENTER);
-
-        s.text("Bling", x, y);
-        //Checks if x position overlaps with screen edge and stops, if not move left   
-        if(x - 0 < 200){
-            x = 0;
-        }else{
-            x-=200;
-        }
-        
-        float offset1 = s.textWidth("Bling");
-        s.text("Bang", x2, y);
-        //Checks if x position overlaps with first word (offset) and stops, if not move left     
-        if(x2 - offset1 < 200){
-            x2 = offset1;
-        }else{
-            x2-=200;
-        }
-        
-        float offset2 = s.textWidth("Bang");
-        s.text("Bang", x3, y);
-        //Checks if x position overlaps with first 2 words (offset) and stops, if not move left   
-        if(x3 - (offset1 + offset2) < 200){
-            x3 = offset1 + offset2;
-        }else{
-            x3-=200;
-        }
-        
-    }*/
 }
