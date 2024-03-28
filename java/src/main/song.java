@@ -1,11 +1,13 @@
 package main;
 
+import C22300773.AidansVisual;
 import C22386221.KimsVisual;
 import ie.tudublin.Visual;
 import processing.core.PFont;
 
 public class song extends Visual{
     KimsVisual Kim; 
+    AidansVisual Aidan;
 
     public void settings(){
         size(1920, 1080, P3D);
@@ -22,8 +24,13 @@ public class song extends Visual{
         loadAudio("data/Creepy Nuts - Bling-Bang-Bang-Born.mp3");
         getAudioPlayer().play();
         PFont font = createFont("Cabazon.otf", 200);
+        PFont calibri = createFont("calibri-regular.ttf", 100);
+        //pg = createGraphics(1600, 900, P3D);
+
         Kim = new KimsVisual(this, font);
-    }   
+        
+        Aidan = new AidansVisual(this, calibri);
+    }
 
     public void keyPressed(){
         if(keyCode == ' ') {
@@ -36,9 +43,18 @@ public class song extends Visual{
         if(keyCode == '0'){
             getAudioPlayer().rewind();
         }
-        }
+    }
+
+    private void playMusicVideo() {
+        //Aidan.SpinningSphere(width, height, 1.0f);
+        String[] vars = {"Width", "height", "Amplitude"};
+        String[] vals = {Integer.toString(width), Integer.toString(height), Float.toString(getSmoothedAmplitude())};
+        Kim.play();
+        Aidan.printVars(vars, vals);
+    }
     
     public void draw(){
-        Kim.play();
+        background(0);
+        playMusicVideo();
     }
 }
