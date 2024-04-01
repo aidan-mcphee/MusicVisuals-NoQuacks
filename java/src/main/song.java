@@ -2,12 +2,14 @@ package main;
 
 import C22300773.AidansVisual;
 import C22386221.KimsVisual;
+import C22408466.EilishsVisual;
 import ie.tudublin.Visual;
 import processing.core.PFont;
 
 public class song extends Visual{
     KimsVisual Kim; 
     AidansVisual Aidan;
+    EilishsVisual Eilish;
 
     public void settings(){
         size(1920, 1080, P3D);

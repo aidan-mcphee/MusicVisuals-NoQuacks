@@ -8,22 +8,29 @@ import ddf.minim.AudioPlayer;
 import ddf.minim.Minim;
 
 
-public class Star {
+public class Star 
+{
     float x, y, z; 
-    float pz = z;
+    float px, py, pz; // previous coords
     float w;
     float h;
+    float starSpeed;
+    float starSize;
+
     song s;
 
-    Star() {
+    public Star() 
+    {
         x = s.random(-w, w);
         y = s.random(-h, h);
         z = s.random(w);
         px = x;
         py = y;
+        pz = z;
     }
 
-    public void update() {
+    public void update() 
+    {
         z = z - starSpeed;
 
         if (z < 1) {
@@ -34,7 +41,8 @@ public class Star {
         }
     }
 
-    public void show() {
+    public void render() 
+    {
         
         s.fill(255);
         s.noStroke();
@@ -42,8 +50,8 @@ public class Star {
         float sx = map(x / z, 0, 1, 0, w);
         float sy = map(y / z, 0, 1, 0, h);
 
-        float starSize = map(z, 0, w, 16, 0);
-        //s.ellipse(sx, sy, starSize, starSize);
+        starSize = map(z, 0, w, 16, 0);
+        s.ellipse(sx, sy, starSize, starSize);
 
         float px = map(x / pz, 0, 1, 0, w);
         float py = map(y / pz, 0, 1, 0, h);

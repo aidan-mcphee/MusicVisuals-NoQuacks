@@ -9,10 +9,12 @@ import ddf.minim.Minim;
 
 public class EilishsVisual extends Visual
 {
-    Star[] stars = new Star[1000];
     float starSpeed;
 
-    public void settings() {
+    Star[] stars = new Star[1000];
+
+    public void settings() 
+    {
         size(800, 800, P3D);
         
         for (int i = 0; i < stars.length; i++) {
@@ -20,15 +22,20 @@ public class EilishsVisual extends Visual
         }
     }
 
-    void draw() {
+    public void setup() 
+    {
+        
+    }
 
+    public void draw() 
+    {
         starSpeed = map(mouseX, 0, width, 0, 50);
         background(0);
         translate(width / 2, height / 2);
 
         for (int i = 0; i < stars.length; i++) {
             stars[i].update();
-            stars[i].show();
+            stars[i].render();
         }
     }
 }
