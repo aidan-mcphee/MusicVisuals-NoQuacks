@@ -31,7 +31,7 @@ public class song extends Visual{
 
         Kim = new KimsVisual(this, font);
         
-        Aidan = new AidansVisual(this, calibri);
+        Aidan = new AidansVisual(this.g, calibri);
     }
 
     public void keyPressed(){
@@ -52,6 +52,8 @@ public class song extends Visual{
         String[] vars = {"Width", "height", "Amplitude"};
         String[] vals = {Integer.toString(width), Integer.toString(height), Float.toString(getSmoothedAmplitude())};
         Kim.play();
+        //Aidan.printVars(vars, vals);
+        Aidan.SpinningSphere(100, 100, 50);
         Aidan.printVars(vars, vals);
     }
     
