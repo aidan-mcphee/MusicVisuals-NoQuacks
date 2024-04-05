@@ -1,41 +1,39 @@
 package C22408466;
 
 import ie.tudublin.Visual;
-import main.song;
-import processing.core.PFont;
-import ddf.minim.AudioBuffer;
-import ddf.minim.AudioPlayer;
-import ddf.minim.Minim;
+import processing.core.PGraphics;
+
 
 public class EilishsVisual extends Visual
 {
+    Star stars[] = new Star[1000];
     float starSpeed;
+   
 
-    Star[] stars = new Star[1000];
-
-    public void settings() 
+    public EilishsVisual(PGraphics g) 
     {
-        size(800, 800, P3D);
-        
+        this.g = g;
         for (int i = 0; i < stars.length; i++) {
-            stars[i] = new Star();
+            stars[i] = new Star(this.g);
         }
     }
 
-    public void setup() 
+    public void setMouseX(int mouseX) 
     {
-        
+        this.mouseX = mouseX;
     }
-
-    public void draw() 
+    
+    public void play() 
     {
-        starSpeed = map(mouseX, 0, width, 0, 50);
         background(0);
-        translate(width / 2, height / 2);
+        translate(g.width / 2, g.height / 2);
+        starSpeed = map(mouseX, 0, g.width, 0, 50);
 
-        for (int i = 0; i < stars.length; i++) {
+        for (int i = 0; i < stars.length; i++) 
+        {
             stars[i].update();
             stars[i].render();
         }
     }
+
 }

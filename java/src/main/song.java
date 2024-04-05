@@ -30,7 +30,7 @@ public class song extends Visual{
         //pg = createGraphics(1600, 900, P3D);
 
         Kim = new KimsVisual(this, font);
-        
+        Eilish = new EilishsVisual(this.g);
         Aidan = new AidansVisual(this.g, calibri);
     }
 
@@ -49,12 +49,14 @@ public class song extends Visual{
 
     private void playMusicVideo() {
         //Aidan.SpinningSphere(width, height, 1.0f);
-        String[] vars = {"Width", "height", "Amplitude"};
-        String[] vals = {Integer.toString(width), Integer.toString(height), Float.toString(getSmoothedAmplitude())};
-        Kim.play();
+        //String[] vars = {"Width", "height", "Amplitude"};
+        //String[] vals = {Integer.toString(width), Integer.toString(height), Float.toString(getSmoothedAmplitude())};
+        //Kim.play();
+        Eilish.setMouseX(mouseX);
+        Eilish.play();
         //Aidan.printVars(vars, vals);
-        Aidan.SpinningSphere(100, 100, 50);
-        Aidan.printVars(vars, vals);
+        //Aidan.SpinningSphere(100, 100, 50);
+        //Aidan.printVars(vars, vals);
     }
     
     public void draw(){

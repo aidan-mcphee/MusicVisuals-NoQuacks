@@ -51,9 +51,8 @@ public class SlidingText extends Visual{
             x += speed;
         }
     }
-
 }
 
-//TODO pass in speed variable (float), *slowly accelerate/decelerate?
-/*TODO if the x is in front of the end reduce the current x by speed, otherwise
+// TODO pass in speed variable (float), *slowly accelerate/decelerate?
+/* TODO if the x is in front of the end reduce the current x by speed, otherwise
 increase the x */
