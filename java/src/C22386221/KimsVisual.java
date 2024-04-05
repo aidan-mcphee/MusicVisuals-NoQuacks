@@ -3,6 +3,7 @@ package C22386221;
 import ie.tudublin.Visual;
 import main.song;
 import processing.core.PFont;
+import processing.core.PGraphics;
 
 public class KimsVisual extends Visual{
     PFont font;
@@ -17,8 +18,8 @@ public class KimsVisual extends Visual{
     SlidingText rBling, rBang, rBang2;
     DancingStickman stickman;
     
-    public KimsVisual(song s, PFont font){
-        this.s = s;
+    public KimsVisual(PGraphics g, PFont font){
+        this.g = g;
         this.w = s.width;
         this.h = s.height;
         this.font = font;
