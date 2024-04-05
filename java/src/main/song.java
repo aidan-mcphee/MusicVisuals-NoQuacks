@@ -29,8 +29,8 @@ public class song extends Visual{
         PFont calibri = createFont("calibri-regular.ttf", 100);
         //pg = createGraphics(1600, 900, P3D);
 
-        Kim = new KimsVisual(this.g, font);
-        
+        //Kim = new KimsVisual(this.g, font);
+        Eilish = new EilishsVisual(this.g);
         Aidan = new AidansVisual(this.g, calibri);
     }
 
@@ -52,7 +52,7 @@ public class song extends Visual{
         //String[] vars = {"Width", "height", "Amplitude"};
         //String[] vals = {Integer.toString(width), Integer.toString(height), Float.toString(getSmoothedAmplitude())};
         //Kim.play();
-        Eilish.setMouseX(mouseX);
+        //Eilish.setMouseX(mouseX);
         Eilish.play();
         //Aidan.printVars(vars, vals);
         //Aidan.SpinningSphere(100, 100, 50);
