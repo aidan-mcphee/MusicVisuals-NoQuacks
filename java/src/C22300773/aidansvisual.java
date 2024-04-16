@@ -1,7 +1,7 @@
 package C22300773;
 
 import ie.tudublin.Visual;
-import main.song;
+import main.Song;
 import processing.core.PFont;
 import processing.core.PGraphics;
 
@@ -10,7 +10,7 @@ public class AidansVisual extends Visual{
 
     int sphereHue = 0;
     float currangle = 0;
-    song s;
+    Song s;
     float y;
     PFont font;
 
