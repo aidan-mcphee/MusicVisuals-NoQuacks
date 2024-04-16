@@ -1,0 +1,268 @@
+0
+00 : 00 : 01, 918 --> 00 : 00 : 03, 328
+chīto, gifted, ara waza, wanted
+
+1
+00 : 00 : 03, 378 --> 00 : 00 : 04, 913
+kinki, kinjishu, akiraka mōten
+
+2
+00 : 00 : 04, 963 --> 00 : 00 : 06, 873
+hansoku, i jigen, kono yononaka no monde wa naidesu
+
+3
+00 : 00 : 06, 923 --> 00 : 00 : 08, 008
+muri gē, sore kītenai tte …
+
+4
+00 : 00 : 08, 008 --> 00 : 00 : 09, 501
+ay raibaruguchi o soroete
+
+5
+00 : 00 : 09, 551 --> 00 : 00 : 10, 961
+wow raibaruguchi o soroete
+ 
+6
+00 : 00 : 11, 011 --> 00 : 00 : 12, 595
+bagu de, magure, mitomene zettē
+
+7
+00 : 00 : 12, 595 --> 00 : 00 : 14, 014
+majide ？ kore o ma … zenbu namami de ？
+
+8
+00 : 00 : 17, 058 --> 00 : 00 : 20, 136
+It's namami It's namami yeah yeah yeah yeah
+
+9
+00 : 00 : 20, 186 --> 00 : 00 : 23, 223
+Bling - Bang - Bang, Bling - Bang - Bang - Born …
+
+10
+00 : 00 : 23, 273 --> 00 : 00 : 25, 725
+Bling - Bang - Bang, Bling - Bang - Bang - Born …
+
+11
+00 : 00 : 25, 775 --> 00 : 00 : 27, 227
+jitsuryoku o hakki shikiru mae ni
+
+12
+00 : 00 : 27, 277 --> 00 : 00 : 28, 728
+aite no hō ga bakkuretekurashī
+
+13
+00 : 00 : 28, 778 --> 00 : 00 : 30, 271
+agarikiru hādoru very happy
+
+14
+00 : 00 : 30, 321 --> 00 : 00 : 31, 906
+akiraka ni dantotsu de pika ichi
+
+15
+00 : 00 : 31, 906 --> 00 : 00 : 35, 193
+aikawarazu dappi shiteru mainichi (Bling Bling …)
+
+16
+00 : 00 : 35, 243 --> 00 : 00 : 38, 321
+dare no nanahikari mo iranai omae no ice yori icy
+
+17
+00 : 00 : 38, 371 --> 00 : 00 : 40, 915
+ore, pat to mi dekinai koto bakkaridakedo very happy
+
+18
+00 : 00 : 40, 915 --> 00 : 00 : 42, 450
+a, kireteru … akireteru mawari
+
+19
+00 : 00 : 42, 500 --> 00 : 00 : 44, 536
+megumareteru kazoku tomodachi (happy)
+
+20
+00 : 00 : 44, 586 --> 00 : 00 : 47, 547
+mō hansoku teki tachi ichi, mina ore ni makasetokeba yoi (Bang Bang Bang)
+
+21
+00 : 00 : 47, 547 --> 00 : 00 : 49, 040
+kyōkasho ni nai, mondaishū ni nai
+
+22
+00 : 00 : 49, 090 --> 00 : 00 : 50, 750
+chō na noroi listen
+
+23
+00 : 00 : 50, 800 --> 00 : 00 : 53, 420
+kagamiyo kagami kotaechatte
+
+24
+00 : 00 : 53, 470 --> 00 : 00 : 56, 923
+Who's the best ? I'm
+the best ! Oh yeah
+
+25
+00 : 00 : 56, 973 --> 00 : 00 : 59, 509
+namami no mama ikeru toko made
+
+26
+00 : 00 : 59, 559 --> 00 : 01 : 02, 228
+To the next, To the 1 ban jō
+
+27
+00 : 01 : 02, 228 --> 00 : 01 : 02, 846
+now singin '
+
+28
+00 : 01 : 02, 896 --> 00 : 01 : 05, 682
+Bling - Bang - Bang, Bling - Bang - Bang,
+Bling - Bang - Bang - Born …
+
+29
+00 : 01 : 05, 732 --> 00 : 01 : 08, 685
+Bling - Bang - Bang, Bling - Bang - Bang,
+Bling - Bang - Bang - Born …
+
+30
+00 : 01 : 08, 735 --> 00 : 01 : 11, 688
+Bling - Bang - Bang, Bling - Bang - Bang,
+Bling - Bang - Bang - Born …
+
+31
+00 : 01 : 11, 738 --> 00 : 01 : 14, 324
+To the next, To the 1 ban jō
+
+32
+00 : 01 : 14, 908 --> 00 : 01 : 18, 328
+Eyday ore no mama de iru dake de chō flex
+
+33
+00 : 01 : 18, 328 --> 00 : 01 : 21, 322
+Eyday dare mo kuchi o hasamenai (don't test)
+
+34
+00 : 01 : 21, 372 --> 00 : 01 : 24, 409
+Eyday ore no mama de iru dake de chō flex
+
+35
+00 : 01 : 24, 459 --> 00 : 01 : 27, 587
+Eyday dare mo kuchi o hasamasenai (don't test)
+
+36
+00 : 01 : 30, 757 --> 00 : 01 : 33, 460
+gakureki mo nai zenka mo nai yoyū de Bling - Bling
+
+37
+00 : 01 : 33, 510 --> 00 : 01 : 36, 838
+kono sonzai jitai ga bunkazaina nōmiso Bling - Bling
+
+38
+00 : 01 : 36, 888 --> 00 : 01 : 39, 632
+kōkyūsha wa kaeru menkyo wa nai aisha Grēn Grēn
+
+39
+00 : 01 : 39, 682 --> 00 : 01 : 41, 384
+zenkoku kakuchi yurasu ippin
+
+40
+00 : 01 : 41, 434 --> 00 : 01 : 42, 761
+kono bero ga Bling - Bling
+
+41
+00 : 01 : 42, 811 --> 00 : 01 : 44, 012
+nara man tan
+
+42
+00 : 01 : 44, 062 --> 00 : 01 : 46, 106
+kansai namari namami no kotodama
+
+43
+00 : 01 : 46, 106 --> 00 : 01 : 49, 142
+ongaku, koūn, shōri no megami, koyoi mo mimata Bang Bang
+
+44
+00 : 01 : 49, 192 --> 00 : 01 : 52, 103
+manga mitaina tomogara to manma de hari aeteshimatteru manga
+
+45
+00 : 01 : 52, 153 --> 00 : 01 : 54, 773
+attōteki chikara kono atama to kuchi kara
+
+46
+00 : 01 : 54, 823 --> 00 : 01 : 56, 316
+kono shintai tattō wa haittenai
+
+47
+00 : 01 : 56, 366 --> 00 : 01 : 57, 859
+kono tsura ni kizu mo tsuitenai
+
+48
+00 : 01 : 57, 909 --> 00 : 01 : 59, 410
+kurikaeshi yarakashiteku damēji ga
+
+49
+00 : 01 : 59, 410 --> 00 : 02 : 00, 987
+ika tsui nenrin o kizamu shiwa
+
+50
+00 : 02 : 01, 037 --> 00 : 02 : 03, 573
+Bling - Bang - Bang, Bling - Bang - Bang,
+Bling - Bang - Bang - Born …
+
+51
+00 : 02 : 03, 623 --> 00 : 02 : 06, 868
+ore no mama de Bling shite Bang shite Bang suru tame ni Born shitekita nippon
+
+52
+00 : 02 : 06, 918 --> 00 : 02 : 09, 871
+kagamiyo kagami kotaechatte
+
+53
+00 : 02 : 09, 921 --> 00 : 02 : 13, 374
+Who's the best ? I'm
+the best ! Oh yeah
+
+54
+00 : 02 : 13, 424 --> 00 : 02 : 15, 960
+namami no mama ikeru toko made
+
+55
+00 : 02 : 16, 010 --> 00 : 02 : 18, 630
+To the next, To the 1 ban jō
+
+56
+00 : 02 : 18, 680 --> 00 : 02 : 19, 389
+now singin '
+
+57
+00 : 02 : 19, 389 --> 00 : 02 : 22, 092
+Bling - Bang - Bang, Bling - Bang - Bang,
+Bling - Bang - Bang - Born …
+
+58
+00 : 02 : 22, 142 --> 00 : 02 : 25, 136
+Bling - Bang - Bang, Bling - Bang - Bang,
+Bling - Bang - Bang - Born …
+
+59
+00 : 02 : 25, 186 --> 00 : 02 : 28, 139
+Bling - Bang - Bang, Bling - Bang - Bang,
+Bling - Bang - Bang - Born …
+
+60
+00 : 02 : 28, 189 --> 00 : 02 : 30, 775
+To the next, To the 1 ban jō
+
+61
+00 : 02 : 31, 568 --> 00 : 02 : 34, 562
+Eyday ore no mama de iru dake de chō flex
+
+62
+00 : 02 : 34, 612 --> 00 : 02 : 37, 732
+Eyday dare mo kuchi o hasamenai (don't test)
+
+63
+00 : 02 : 37, 782 --> 00 : 02 : 40, 902
+Eyday ore no mama de iru dake de chō flex
+
+64
+00 : 02 : 40, 952 --> 00 : 02 : 44, 122
+Eyday dare mo kuchi o hasamasenai (don't test)
