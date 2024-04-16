@@ -1,25 +1,26 @@
 package C22386221;
 import ie.tudublin.Visual;
-import main.song;
+import main.Song;
+import processing.core.PGraphics;
 import processing.core.PImage;
 
 public class DancingStickman extends Visual{
-    song s;
+    Song s;
     float x,y;
     PImage[] stickman = new PImage[32];
 
-    public DancingStickman(song s, float x, float y){
-        this.s = s;
+    public DancingStickman(PGraphics g, float x, float y){
+        this.g = g;
         this.x = x;
         this.y = y;
         for(int i = 0; i < stickman.length; i++){
             String filename = "Stickman_dance/frame" + i + ".png";
-            stickman[i] = s.loadImage(filename);
+            //stickman[i] = loadImage(filename)
         }
     }
 
     public void render(){
-        int index = s.frameCount % stickman.length; // Loop through the images
-        s.image(stickman[index], x, y);
+        int index = frameCount % stickman.length; // Loop through the images
+        //image(stickman[index], x, y);
     }
 }

@@ -1,13 +1,13 @@
 package C22386221;
 
 import ie.tudublin.Visual;
-import main.song;
+import main.Song;
 import processing.core.PFont;
 import processing.core.PGraphics;
 
 public class KimsVisual extends Visual{
     PFont font;
-    song s;
+    Song s;
     float w;
     float h;
     float x;
@@ -20,34 +20,34 @@ public class KimsVisual extends Visual{
     
     public KimsVisual(PGraphics g, PFont font){
         this.g = g;
-        this.w = s.width;
-        this.h = s.height;
+        this.w = g.width;
+        this.h = g.height;
         this.font = font;
         x = w;
         x2 = w;
         x3 = w;
 
-        bling = new SlidingText(s,"Bling", font, x, h/12, 200, 0);
-        bang = new SlidingText(s, "Bang", font, x2, h/12, 200, 394);
-        bang2 = new SlidingText(s, "Bang", font, x3, h/12, 200, (394 + 389));
+        bling = new SlidingText(this.g,"Bling", font, x, h/12, 200, 0);
+        bang = new SlidingText(this.g, "Bang", font, x2, h/12, 200, 394);
+        bang2 = new SlidingText(this.g, "Bang", font, x3, h/12, 200, (394 + 389));
 
-        rBling = new SlidingText(s,"Bling", font, 0, h - h/9, 200, x - (394 + 389));
-        rBang = new SlidingText(s, "Bang", font, 0, h - h/9, 200, x - 394);
-        rBang2 = new SlidingText(s,"Bang", font, 0, h - h/9, 200, x);
+        rBling = new SlidingText(this.g,"Bling", font, 0, h - h/9, 200, x - (394 + 389));
+        rBang = new SlidingText(this.g, "Bang", font, 0, h - h/9, 200, x - 394);
+        rBang2 = new SlidingText(this.g,"Bang", font, 0, h - h/9, 200, x);
 
-        stickman = new DancingStickman(s, w/4,h/4);
+        stickman = new DancingStickman(this.g, w/4,h/4);
     }
     
     public void play(){
         int m = millis();
-        s.colorMode(HSB);
-        //s.background(m % 255);
-        s.background(37,255,255);
+        colorMode(HSB);
+        //background(m % 255);
+        background(37,255,255);
 
         //black bars
-        s.fill(0);
-        s.rect(0, 0, w, h/5);
-        s.rect(0, h, w, -h/5);
+        fill(0);
+        rect(0, 0, w, h/5);
+        rect(0, h, w, -h/5);
         
         if (m >= 1000){
             bling.SlideLeft();
@@ -61,6 +61,6 @@ public class KimsVisual extends Visual{
 
         stickman.render();
         
-        //System.out.println(s.textWidth("Bang"));
+        //System.out.println(textWidth("Bang"));
     }
 }

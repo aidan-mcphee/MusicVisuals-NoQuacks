@@ -1,19 +1,18 @@
 package C22386221;
 
 import ie.tudublin.Visual;
-import main.song;
 import processing.core.PFont;
+import processing.core.PGraphics;
 
 public class SlidingText extends Visual{
-    song s;
     String text;
     PFont font;
     float x,y;
     float speed;
     float end;
     
-    public SlidingText(song s,String text, PFont font, float x, float y, float speed, float end){
-        this.s = s;
+    public SlidingText(PGraphics g,String text, PFont font, float x, float y, float speed, float end){
+        this.g = g;
         this.text = text;
         this.font = font;
         this.x = x;
@@ -23,12 +22,12 @@ public class SlidingText extends Visual{
     }
 
     public void SlideLeft(){
-        s.textSize(128);    
-        s.fill(255);
-        s.textFont(font);
-        s.textAlign(LEFT,CENTER);
+        textSize(128);    
+        fill(255);
+        textFont(font);
+        textAlign(LEFT,CENTER);
 
-        s.text(text,x,y);
+        text(text,x,y);
         //Checks if x position overlaps the end location and stops, if not move left
         if(x - end < speed){
             x = end;
@@ -38,12 +37,12 @@ public class SlidingText extends Visual{
     }
 
     public void SlideRight(){
-        s.textSize(128);    
-        s.fill(255);
-        s.textFont(font);
-        s.textAlign(RIGHT,CENTER);
+        textSize(128);    
+        fill(255);
+        textFont(font);
+        textAlign(RIGHT,CENTER);
 
-        s.text(text,x,y);
+        text(text,x,y);
         //Checks if x position overlaps the end location and stops, if not move right
         if(x + speed > end){
             x = end;
