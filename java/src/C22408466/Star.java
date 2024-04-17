@@ -37,6 +37,7 @@ public class Star extends Visual
     {
         //fill(90, 90, 255);
         //noStroke();
+        colorMode(RGB);
 
         float sx = map(x / z, 0, 1, 0, g.width);
         float sy = map(y / z, 0, 1, 0, g.height);
@@ -48,7 +49,7 @@ public class Star extends Visual
         py = map(y / pz, 0, 1, 0, g.height);
         
         pz = z;
-        stroke(38, 255, 255);
+        stroke(255, 213, 0);
         line(px, py, sx, sy);
     
     }
