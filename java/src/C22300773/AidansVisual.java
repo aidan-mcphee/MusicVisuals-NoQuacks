@@ -43,6 +43,7 @@ public class AidansVisual extends Visual{
         float biggestWord = 0;
         textFont(font);
         textSize(fontSize);
+        textAlign(LEFT, TOP);
         y = 0;
         for (String var : variables) {
             if (textWidth(var) > biggestWord) {
@@ -63,11 +64,6 @@ public class AidansVisual extends Visual{
         for (int i = 0; i < variables.length; i++) {
             textAlign(LEFT, TOP);
             text(names[i] + ": " + variables[i], 0, y);
-            y += fontSize;
-        }
-        for (String var : variables) {
-            textAlign(LEFT, TOP);
-            text(var, 0, y);
             y += fontSize;
         }
     }
