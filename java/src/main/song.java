@@ -52,7 +52,6 @@ public class song extends Visual{
         //String[] vars = {"Width", "height", "Amplitude"};
         //String[] vals = {Integer.toString(width), Integer.toString(height), Float.toString(getSmoothedAmplitude())};
         //Kim.play();
-        //Eilish.setMouseX(mouseX);
         Eilish.play();
         //Aidan.printVars(vars, vals);
         //Aidan.SpinningSphere(100, 100, 50);
