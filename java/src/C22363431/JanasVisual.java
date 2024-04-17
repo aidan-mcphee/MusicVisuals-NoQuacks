@@ -1,15 +1,8 @@
 package C22363431;
 
 import ie.tudublin.Visual;
-import ddf.minim.AudioBuffer;
-import ddf.minim.AudioPlayer;
-import ddf.minim.Minim;
 
 public class JanasVisual extends Visual{
-
-    Minim minim;
-    AudioPlayer aPlayer;
-    AudioBuffer aBuffer;
 
     int mode = 0;
     int cols, rows;
@@ -31,12 +24,6 @@ public class JanasVisual extends Visual{
         startMinim();
         startListening();
 
-        minim = new Minim(this);
-        aPlayer = minim.loadFile("data/Creepy Nuts - Bling-Bang-Bang-Born.mp3");
-        aPlayer.play();
-        aBuffer = aPlayer.mix;
-
-
         cols = w / scale;
         rows = h / scale;
         
@@ -44,19 +31,6 @@ public class JanasVisual extends Visual{
         
     }
 
-    public void keyPressed() {
-        if (key >= '0' && key <= '9') {
-			mode = key - '0';
-		}
-		if (keyCode == ' ') {
-            if (aPlayer.isPlaying()) {
-                aPlayer.pause();
-            } else {
-                aPlayer.rewind();
-                aPlayer.play();
-            }
-        }
-    }
 
     public void draw() {
 
