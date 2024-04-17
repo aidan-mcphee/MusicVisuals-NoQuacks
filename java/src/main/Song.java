@@ -72,7 +72,7 @@ public class Song extends Visual{
         Aidan.printVars(vars, vals);
         //Aidan.SpinningSphere(100, 100, 50);
         //Aidan.printVars(vars, vals);
-        Jana.drawTerrain(getSmoothedAmplitude());
+        Jana.play(getSmoothedAmplitude());
     }
     
     public void draw() {
