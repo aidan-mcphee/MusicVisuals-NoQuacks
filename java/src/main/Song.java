@@ -7,6 +7,7 @@ import C22408466.EilishsVisual;
 import C22363431.JanasVisual;
 import ie.tudublin.Visual;
 import processing.core.PFont;
+import processing.core.PImage;
 
 public class Song extends Visual{
     KimsVisual Kim; 
@@ -15,6 +16,7 @@ public class Song extends Visual{
     JanasVisual Jana;
     SubtitleReader sr;
     Controller c;
+    PImage[] stickman = new PImage[32];
 
     public void settings(){
         size(1920, 1080, P3D);
@@ -33,9 +35,15 @@ public class Song extends Visual{
         PFont font = createFont("fonts/Cabazon.otf", 200);
         PFont calibri = createFont("fonts/calibri-regular.ttf", 100);
         //pg = createGraphics(1600, 900, P3D);
+
+        for(int i = 0; i < stickman.length; i++){
+            String filename = "Stickman_dance/frame" + i + ".png";
+            stickman[i] = loadImage(filename);
+        }
+
         c = new Controller(this);
 
-        Kim = new KimsVisual(this.g, font);
+        Kim = new KimsVisual(this.g, font, stickman);
         Eilish = new EilishsVisual(this.g);
         Aidan = new AidansVisual(this.g, calibri);
         Jana = new JanasVisual(this.g, 0.8f);
