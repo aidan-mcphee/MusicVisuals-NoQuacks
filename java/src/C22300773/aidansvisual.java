@@ -65,10 +65,5 @@ public class AidansVisual extends Visual{
             text(names[i] + ": " + variables[i], 0, y);
             y += fontSize;
         }
-        for (String var : variables) {
-            textAlign(LEFT, TOP);
-            text(var, 0, y);
-            y += fontSize;
-        }
     }
 }
