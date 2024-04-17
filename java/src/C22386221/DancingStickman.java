@@ -7,20 +7,17 @@ import processing.core.PImage;
 public class DancingStickman extends Visual{
     Song s;
     float x,y;
-    PImage[] stickman = new PImage[32];
+    PImage[] stickman;
 
-    public DancingStickman(PGraphics g, float x, float y){
+    public DancingStickman(PGraphics g, float x, float y, PImage[] stickman){
         this.g = g;
         this.x = x;
         this.y = y;
-        for(int i = 0; i < stickman.length; i++){
-            String filename = "Stickman_dance/frame" + i + ".png";
-            //stickman[i] = loadImage(filename)
-        }
+        this.stickman = stickman;
     }
 
     public void render(){
-        int index = frameCount % stickman.length; // Loop through the images
-        //image(stickman[index], x, y);
+        int index = frameCount % stickman.length;
+        image(stickman[index], x, y);
     }
 }
