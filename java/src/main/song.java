@@ -1,6 +1,7 @@
 package main;
 
 import C22300773.AidansVisual;
+import C22363431.JanasVisual;
 import C22386221.KimsVisual;
 import C22408466.EilishsVisual;
 import ie.tudublin.Visual;
@@ -10,6 +11,7 @@ public class song extends Visual{
     KimsVisual Kim; 
     AidansVisual Aidan;
     EilishsVisual Eilish;
+    JanasVisual Jana;
 
     public void settings(){
         size(1920, 1080, P3D);
@@ -30,8 +32,9 @@ public class song extends Visual{
         //pg = createGraphics(1600, 900, P3D);
 
         //Kim = new KimsVisual(this.g, font);
-        Eilish = new EilishsVisual(this.g);
-        Aidan = new AidansVisual(this.g, calibri);
+        //Eilish = new EilishsVisual(this.g);
+        //Aidan = new AidansVisual(this.g, calibri);
+        Jana = new JanasVisual(this.g, 0.8f);
     }
 
     public void keyPressed(){
@@ -53,10 +56,11 @@ public class song extends Visual{
         //String[] vals = {Integer.toString(width), Integer.toString(height), Float.toString(getSmoothedAmplitude())};
         //Kim.play();
         //Eilish.setMouseX(mouseX);
-        Eilish.play();
+        //Eilish.play();
         //Aidan.printVars(vars, vals);
         //Aidan.SpinningSphere(100, 100, 50);
         //Aidan.printVars(vars, vals);
+        Jana.drawTerrain();
     }
     
     public void draw(){
