@@ -58,7 +58,6 @@ public class Song extends Visual{
             text(text, width/2, height/2);
         }
         */
-        //Eilish.setMouseX(mouseX);
         //Eilish.play();
         Aidan.printVars(vars, vals);
         //Aidan.SpinningSphere(100, 100, 50);

@@ -17,22 +17,19 @@ public class EilishsVisual extends Visual
             stars[i] = new Star(this.g);
         }
     }
-
-    /*public void setMouseX(int mouseX) 
-    {
-        this.mouseX = mouseX;
-    }*/
     
     public void play() 
     {
-        //starSpeed = map(mouseX, 0, g.width, 0, 50);
         background(0);
-        translate(g.width / 2, g.height / 2);
+        pushMatrix();
+        //translate(g.width / 2, g.height / 2);
 
         for (int i = 0; i < stars.length; i++) 
         {
             stars[i].update();
             stars[i].render();
         }
+
+        popMatrix();
     }
 }
