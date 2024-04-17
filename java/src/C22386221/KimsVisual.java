@@ -4,6 +4,7 @@ import ie.tudublin.Visual;
 import main.Song;
 import processing.core.PFont;
 import processing.core.PGraphics;
+import processing.core.PImage;
 
 public class KimsVisual extends Visual{
     PFont font;
@@ -17,12 +18,16 @@ public class KimsVisual extends Visual{
     SlidingText bling, bang, bang2;
     SlidingText rBling, rBang, rBang2;
     DancingStickman stickman;
+    PImage[] stickmanImages;
+    MagicCircle magicCircle;
     
-    public KimsVisual(PGraphics g, PFont font){
+    public KimsVisual(PGraphics g, PFont font, PImage[] stickmanImg){
         this.g = g;
         this.w = g.width;
         this.h = g.height;
         this.font = font;
+        this.stickmanImages = stickmanImg;
+
         x = w;
         x2 = w;
         x3 = w;
@@ -35,14 +40,15 @@ public class KimsVisual extends Visual{
         rBang = new SlidingText(this.g, "Bang", font, 0, h - h/9, 200, x - 394);
         rBang2 = new SlidingText(this.g,"Bang", font, 0, h - h/9, 200, x);
 
-        stickman = new DancingStickman(this.g, w/4,h/4);
+        stickman = new DancingStickman(this.g, w/8,h/8, stickmanImg);
+        magicCircle = new MagicCircle(this.g, w / 2, h / 2 + 50, -100, 300, PI / 3);
     }
     
     public void play(){
         int m = millis();
-        colorMode(HSB);
+        colorMode(RGB);
         //background(m % 255);
-        background(37,255,255);
+        background(255, 204, 0);
 
         //black bars
         fill(0);
@@ -59,7 +65,9 @@ public class KimsVisual extends Visual{
             rBang2.SlideRight();
         }
 
-        stickman.render();
+        magicCircle.render();
+
+        //stickman.render();
         
         //System.out.println(textWidth("Bang"));
     }
