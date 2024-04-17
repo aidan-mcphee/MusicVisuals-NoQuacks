@@ -6,7 +6,6 @@ import C22386221.KimsVisual;
 import C22408466.EilishsVisual;
 import ie.tudublin.Visual;
 import processing.core.PFont;
-import C22300773.subtitles.Subtitle;
 
 public class Song extends Visual{
     KimsVisual Kim; 
@@ -46,26 +45,28 @@ public class Song extends Visual{
 
     private void playMusicVideo() {
         //Aidan.SpinningSphere(width, height, 1.0f);
-        //String[] vars = {"Width", "height", "Amplitude"};
-        //String[] vals = {Integer.toString(width), Integer.toString(height), Float.toString(getSmoothedAmplitude())};
-        Kim.play();
-        Subtitle sub = sr.getCurrentSubtitle(getAudioPlayer().position() / 1000);
-
+        String[] vars = {"Width", "height", "Amplitude"};
+        String[] vals = {Integer.toString(width), Integer.toString(height), Float.toString(getSmoothedAmplitude())};
+        //Kim.play();
+        //Subtitle sub = sr.getCurrentSubtitle(getAudioPlayer().position() / 1000);
+        //yana.drawJanasVisual();
+        /* 
         if (sub != null) {
-            String text = sub.getText();
+            St  ring text = sub.getText();
             textAlign(CENTER, CENTER);
             textSize(64);
             text(text, width/2, height/2);
         }
-
+        */
         //Eilish.setMouseX(mouseX);
         //Eilish.play();
-        //Aidan.printVars(vars, vals);
+        Aidan.printVars(vars, vals);
         //Aidan.SpinningSphere(100, 100, 50);
         //Aidan.printVars(vars, vals);
     }
     
     public void draw() {
+        calculateAverageAmplitude();
         background(0);
         playMusicVideo();
     }
