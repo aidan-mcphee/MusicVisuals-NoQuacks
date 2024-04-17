@@ -7,7 +7,7 @@ import processing.core.PGraphics;
 public class EilishsVisual extends Visual
 {
     Star stars[] = new Star[1000];
-    //float starSpeed;
+    Rain rain[] = new Rain[100];
 
     public EilishsVisual(PGraphics g) 
     {
@@ -16,18 +16,40 @@ public class EilishsVisual extends Visual
         {
             stars[i] = new Star(this.g);
         }
+
+        for (int i = 0; i < rain.length; i++) 
+        {
+            rain[i] = new Rain(this.g);
+        }
+        
     }
     
-    public void play() 
+    public void Starfield() 
     {
+        colorMode(RGB);
         background(0);
         pushMatrix();
-        //translate(g.width / 2, g.height / 2);
+        translate(g.width / 2, g.height / 2);
 
         for (int i = 0; i < stars.length; i++) 
         {
             stars[i].update();
             stars[i].render();
+        }
+
+        popMatrix();
+    }
+
+    public void Beams()
+    {
+        colorMode(RGB);
+        background(255, 213, 0);
+        pushMatrix();
+
+        for (int i = 0; i < rain.length; i++) 
+        {
+            rain[i].fall();
+            rain[i].render();
         }
 
         popMatrix();
