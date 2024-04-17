@@ -1,7 +1,7 @@
 package C22300773;
 
 import ie.tudublin.Visual;
-import main.song;
+import main.Song;
 import processing.core.PFont;
 import processing.core.PGraphics;
 
@@ -10,7 +10,7 @@ public class AidansVisual extends Visual{
 
     int sphereHue = 0;
     float currangle = 0;
-    song s;
+    Song s;
     float y;
     PFont font;
 
@@ -43,6 +43,7 @@ public class AidansVisual extends Visual{
         float biggestWord = 0;
         textFont(font);
         textSize(fontSize);
+        textAlign(LEFT, TOP);
         y = 0;
         for (String var : variables) {
             if (textWidth(var) > biggestWord) {
@@ -63,11 +64,6 @@ public class AidansVisual extends Visual{
         for (int i = 0; i < variables.length; i++) {
             textAlign(LEFT, TOP);
             text(names[i] + ": " + variables[i], 0, y);
-            y += fontSize;
-        }
-        for (String var : variables) {
-            textAlign(LEFT, TOP);
-            text(var, 0, y);
             y += fontSize;
         }
     }
