@@ -7,6 +7,7 @@ import C22408466.EilishsVisual;
 import C22363431.JanasVisual;
 import ie.tudublin.Visual;
 import processing.core.PFont;
+import processing.core.PImage;
 
 public class Song extends Visual{
     KimsVisual Kim; 
