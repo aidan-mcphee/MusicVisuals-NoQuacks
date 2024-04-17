@@ -4,6 +4,7 @@ import C22300773.AidansVisual;
 import C22300773.subtitles.SubtitleReader;
 import C22386221.KimsVisual;
 import C22408466.EilishsVisual;
+import C22363431.JanasVisual;
 import ie.tudublin.Visual;
 import processing.core.PFont;
 
@@ -11,6 +12,7 @@ public class Song extends Visual{
     KimsVisual Kim; 
     AidansVisual Aidan;
     EilishsVisual Eilish;
+    JanasVisual Jana;
     SubtitleReader sr;
     Controller c;
 
@@ -36,6 +38,7 @@ public class Song extends Visual{
         Kim = new KimsVisual(this.g, font);
         Eilish = new EilishsVisual(this.g);
         Aidan = new AidansVisual(this.g, calibri);
+        Jana = new JanasVisual(this.g, 0.8f);
         sr = new SubtitleReader("java/data/subtitles/subs.srt");
     }
 
@@ -49,7 +52,6 @@ public class Song extends Visual{
         String[] vals = {Integer.toString(width), Integer.toString(height), Float.toString(getSmoothedAmplitude())};
         //Kim.play();
         //Subtitle sub = sr.getCurrentSubtitle(getAudioPlayer().position() / 1000);
-        //yana.drawJanasVisual();
         /* 
         if (sub != null) {
             St  ring text = sub.getText();
@@ -62,6 +64,7 @@ public class Song extends Visual{
         Aidan.printVars(vars, vals);
         //Aidan.SpinningSphere(100, 100, 50);
         //Aidan.printVars(vars, vals);
+        Jana.drawTerrain(getSmoothedAmplitude());
     }
     
     public void draw() {
