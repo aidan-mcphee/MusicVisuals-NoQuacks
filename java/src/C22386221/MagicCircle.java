@@ -9,6 +9,7 @@ public class MagicCircle extends Visual {
     float centerX, centerY, centerZ;
     int circleSize;
     float rotationX;
+    float smoothAmp;
 
     public MagicCircle(PGraphics g, float x, float y, float z, int size, float rotX) {
         this.g = g;
@@ -19,47 +20,72 @@ public class MagicCircle extends Visual {
         this.rotationX = rotX;
     }
 
+    public void setAmplitude(float amp) {
+        smoothAmp = amp;
+    }
+
     public void render() {
         g.pushMatrix();
         g.translate(centerX, centerY, centerZ);
         g.rotateX(rotationX);
-
         drawGlowingCircle();
-        drawMagicEffects();
-
         g.popMatrix();
     }
 
     private void drawGlowingCircle() {
         g.noStroke();
-        g.fill(237, 249, 255, 140); // Alpha value for desired glow intensity
-        g.ellipse(0, 0, circleSize * 1.2f, circleSize * 1.2f); // Size for glow effect
-        g.fill(176, 229, 255, 150);
+
+        g.fill(millis() % 255, 171, 252);
+        g.ellipse(0, 0, circleSize * 1.2f, circleSize * 1.2f);
+        g.fill(millis() % 255, 3, 252);
+        g.ellipse(0, 0, circleSize * 1.1f, circleSize * 1.1f);
+        g.fill(millis() % 255, 240, 255);
         g.ellipse(0, 0, circleSize, circleSize);
+
+        drawMagicEffects();
+
+        g.ellipse(0, 0, circleSize * 0.9f, circleSize * 0.9f);
+        g.ellipse(0, 0, circleSize * 0.8f, circleSize * 0.8f);
+
+        g.fill(millis() % 255, 171, 252);
+        g.ellipse(0, 0, circleSize * 0.6f, circleSize * 0.6f);
+        g.fill(millis() % 255, 3, 252);
+        g.ellipse(0, 0, circleSize * 0.5f, circleSize * 0.5f);
+
+        g.fill(millis() % 255, 171, 252);
+        g.ellipse(0, 0, circleSize * 0.3f, circleSize * 0.3f);
+        g.fill(millis() % 255, 3, 252);
+        g.ellipse(0, 0, circleSize * 0.2f, circleSize * 0.2f);
+
+
     }
 
     private void drawMagicEffects() {
-        int m = millis();
-        
-        float angleStep = 15; // Angle step for the density of effects
-        float arcLength = 20; // Length of the arcs
-        float arcRadius = circleSize / 2; // Radius of the arcs
+    
+        float angleStep = 15; 
+        float arcRadius = circleSize / 2;
+    
+        float maxAmplitudeHeight = 800; 
     
         for (float angle = 0; angle < 360; angle += angleStep) {
             float x1 = cos(radians(angle)) * arcRadius;
             float y1 = sin(radians(angle)) * arcRadius;
-            float x2 = cos(radians(angle + arcLength)) * arcRadius;
-            float y2 = sin(radians(angle + arcLength)) * arcRadius;
+            float x2 = x1;
+            float y2 = y1; 
     
-            // Gradient fill color for the arcs
-            int arcColor1 = color(m % 255, 240, 255);
-            int arcColor2 = color(m% 255, 240, 255);
+            float z2 = map(smoothAmp, 0, 1, 0, maxAmplitudeHeight);
+
+            int arcColor1 = color(millis() % 255, 240, 255);
+            int arcColor2 = color(millis() % 255, 240, 255);
             float gradientFactor = map(angle, 0, 360, 0, 1);
             int arcColor = lerpColor(arcColor1, arcColor2, gradientFactor);
             g.stroke(arcColor);
             g.strokeWeight(3);
-            g.line(x1, y1, 0, x2, y2, 200);
+            g.line(x1, y1, 0, x2, y2, z2);
         }
     }
+    
+    
+     
     
 }
