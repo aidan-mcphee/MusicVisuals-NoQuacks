@@ -5,31 +5,49 @@ import processing.core.PGraphics;
 public class SpinningSquares extends Visual{
 
     float aspeed;
+    boolean peak;
+    float currentHue;
 
     public SpinningSquares(PGraphics g) {
+        this.width = g.width;
+        this.height = g.height;
         this.g = g;
         frameRate = 60;
+        currentHue = 0; 
     }
+    
 
-    public void drawSquares() {
-        translate(100, 100);
-        aspeed = ((float)frameCount / 360) * TWO_PI;
+    public void drawSquares(float amp) {
+        colorMode(HSB);
+        pushMatrix();
+        aspeed = (100*amp / 360) * TWO_PI;
 
-        noFill();
-        strokeWeight(2);
-        stroke(50);
+        //float hueIncrement1 = (70-0) / (height / 200 + 1); 
+        //float hueIncrement2 = (300-255) / (height / 200 + 1);
+ 
 
-        for (int y = 0; y <= 300; y += 30) {
-            for (int x = 0; x <= 300; x += 30) {
+        noStroke();
+        System.out.println(aspeed);
+        for (int y = 0; y <= height; y += 200) {
+            for (int x = 0; x <= width; x += 200) {
+                fill(currentHue, 360, 360);
+                if (aspeed > 0.9f && !peak) {
+                    currentHue = (currentHue + 30) % 255;
+                    peak = true;
+                }
+                else if (aspeed < 0.3f) {
+                    peak = false;
+                }
             float size2 = map(cos(-aspeed+x*49+y*2), -1, 1, -50, 50);
             pushMatrix();
             translate(x, y);
             rotate(aspeed);
             rectMode(CENTER);
-            rect(0, 0, size2*0.7f, size2*0.7f);
+            rect(0, 0, size2*3f, size2*3f);
             popMatrix();
             }
         }
+        popMatrix();
     }
 }
 
