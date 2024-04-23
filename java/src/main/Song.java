@@ -17,6 +17,7 @@ public class Song extends Visual{
     SubtitleReader sr;
     Controller c;
     PImage[] stickman = new PImage[32];
+    PImage[] stickmanBig = new PImage[32];
 
     public void settings(){
         size(1920, 1080, P3D);
@@ -45,9 +46,17 @@ public class Song extends Visual{
             stickman[i].resize(newWidth, newHeight);
         }
 
+        int newWidth2 = 550;
+        int newHeight2 = (int)(newWidth2 / aspectRatio);
+        for(int i = 0; i < stickmanBig.length; i++){
+            String filename = "Stickman_dance/frame" + i + ".png";
+            stickmanBig[i] = loadImage(filename);
+            stickmanBig[i].resize(newWidth2, newHeight2);
+        }
+
         c = new Controller(this);
 
-        Kim = new KimsVisual(this.g, font, stickman);
+        Kim = new KimsVisual(this.g, font, stickman, stickmanBig);
         Eilish = new EilishsVisual(this.g);
         Aidan = new AidansVisual(this.g, calibri);
         Jana = new JanasVisual(this.g, 0.8f);
@@ -78,8 +87,8 @@ public class Song extends Visual{
         //Aidan.SpinningSphere(100, 100, 50);
         //Aidan.printVars(vars, vals);
         //Aidan.SpinningSphere(100, 100, 50);
-        Aidan.printVars(vars, vals);
-        //Kim.play(getSmoothedAmplitude());
+        //Aidan.printVars(vars, vals);
+        Kim.play(getSmoothedAmplitude());
         //Jana.play(getSmoothedAmplitude());
     }
     

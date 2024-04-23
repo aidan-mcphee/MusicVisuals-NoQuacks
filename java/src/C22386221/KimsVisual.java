@@ -17,18 +17,19 @@ public class KimsVisual extends Visual{
     int fontSize = 128;
     SlidingText bling, bang, bang2;
     SlidingText rBling, rBang, rBang2;
-    DancingStickman stickman, stickman2;
-    PImage[] stickmanImages;
+    DancingStickman stickman, stickman2, stickmanBig;
+    PImage[] stickmanImages, stickmanImages2;
     MagicCircle magicCircle, magicCircle2;
     int numSquares;
     int squareSize;
     
-    public KimsVisual(PGraphics g, PFont font, PImage[] stickmanImg){
+    public KimsVisual(PGraphics g, PFont font, PImage[] stickmanImg, PImage[] stickmanImg2){
         this.g = g;
         this.w = g.width;
         this.h = g.height;
         this.font = font;
         this.stickmanImages = stickmanImg;
+        this.stickmanImages2 = stickmanImg2;
 
 
         x = w;
@@ -47,8 +48,8 @@ public class KimsVisual extends Visual{
 
         stickman = new DancingStickman(this.g, w/2 + 50,h/2.5f, stickmanImg);
         stickman2 = new DancingStickman(this.g, w/4 + 50,h/2.5f, stickmanImg);
-        magicCircle = new MagicCircle(this.g, w / 2, h / 2 + 50, -100, 400, PI / 3);
-        magicCircle2 = new MagicCircle(this.g, w / 3, h / 3 + 50, -180, 300, PI / 3);
+        stickmanBig = new DancingStickman(this.g, w/3 + 50,h/5, stickmanImg2);
+        magicCircle = new MagicCircle(this.g, w / 2, h/2  + 10, -100, 800, PI / 3);
     }
     
     public void play(float smoothAmp){
@@ -85,11 +86,10 @@ public class KimsVisual extends Visual{
 
         magicCircle.setAmplitude(smoothAmp);
         magicCircle.render();
-        magicCircle2.setAmplitude(smoothAmp);
-        magicCircle2.render();
 
         stickman.render();
         stickman2.render();
+        stickmanBig.render();
         
     }
 }
