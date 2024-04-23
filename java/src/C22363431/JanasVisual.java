@@ -10,6 +10,8 @@ public class JanasVisual extends Visual{
     int frameCount;
 
     public JanasVisual(PGraphics g, float size) {
+        this.width = g.width;
+        this.height = g.height;
         this.g = g;
         terrainGen = new Terrain(this.g, size);
         SpSquares = new SpinningSquares(this.g);
@@ -18,7 +20,8 @@ public class JanasVisual extends Visual{
 
     public void play(float amp) {
         //terrainGen.drawTerrain(amp);
-        SpSquares.drawSquares(frameCount);
+        SpSquares.drawSquares(amp);
         frameCount++;
     }
+    
 }

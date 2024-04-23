@@ -58,7 +58,7 @@ public class Song extends Visual{
         //Aidan.SpinningSphere(width, height, 1.0f);
         String[] vars = {"Width", "height", "Amplitude"};
         String[] vals = {Integer.toString(width), Integer.toString(height), Float.toString(getSmoothedAmplitude())};
-        Kim.play(getSmoothedAmplitude());
+
 
         //Subtitle sub = sr.getCurrentSubtitle(getAudioPlayer().position() / 1000);
         /* 
@@ -70,10 +70,11 @@ public class Song extends Visual{
         }
         */
         //Eilish.play();
-        Aidan.printVars(vars, vals);
-        //Aidan.SpinningSphere(100, 100, 50);
         //Aidan.printVars(vars, vals);
-        //Jana.drawTerrain(getSmoothedAmplitude());
+        //Aidan.SpinningSphere(100, 100, 50);
+        Aidan.printVars(vars, vals);
+        //Kim.play(getSmoothedAmplitude());
+        Jana.play(getSmoothedAmplitude());
     }
     
     public void draw() {
