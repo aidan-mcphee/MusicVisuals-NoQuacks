@@ -27,7 +27,6 @@ public class EilishsVisual extends Visual
     public void Starfield(float smoothAmp) 
     {
         colorMode(RGB);
-        background(0);
         pushMatrix();
         translate(g.width / 2, g.height / 2);
 

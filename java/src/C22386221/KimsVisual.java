@@ -54,7 +54,6 @@ public class KimsVisual extends Visual{
     public void play(float smoothAmp){
         int m = millis();
         colorMode(RGB);
-        background(0);
 
         noStroke();
         pushMatrix();
