@@ -24,7 +24,7 @@ public class EilishsVisual extends Visual
         
     }
     
-    public void Starfield() 
+    public void Starfield(float smoothAmp) 
     {
         colorMode(RGB);
         background(0);
@@ -33,14 +33,24 @@ public class EilishsVisual extends Visual
 
         for (int i = 0; i < stars.length; i++) 
         {
+            stars[i].setAmplitude(smoothAmp);
             stars[i].update();
-            stars[i].render();
+            stars[i].renderYellow();
+            
+        }
+        
+        for (int i = 0; i < stars.length; i++) 
+        {
+            stars[i].setAmplitude(smoothAmp);
+            stars[i].updateSlow();
+            stars[i].renderPurple();
+            
         }
 
         popMatrix();
     }
 
-    public void Beams()
+    public void Beams(float smoothAmp)
     {
         colorMode(RGB);
         background(255, 213, 0);
