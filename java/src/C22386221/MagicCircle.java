@@ -82,7 +82,7 @@ public class MagicCircle extends Visual {
             float gradientFactor = map(angle, 0, 360, 0, 1);
             int arcColor = lerpColor(arcColor1, arcColor2, gradientFactor);
             g.stroke(arcColor);
-            g.strokeWeight(3);
+            g.strokeWeight(5);
             g.line(x1, y1, 0, x2, y2, z2);
         }
     }

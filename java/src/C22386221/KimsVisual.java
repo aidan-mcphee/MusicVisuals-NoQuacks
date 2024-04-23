@@ -22,7 +22,7 @@ public class KimsVisual extends Visual{
     MagicCircle magicCircle, magicCircle2;
     int numSquares;
     int squareSize;
-    
+
     public KimsVisual(PGraphics g, PFont font, PImage[] stickmanImg, PImage[] stickmanImg2){
         this.g = g;
         this.w = g.width;
@@ -53,7 +53,6 @@ public class KimsVisual extends Visual{
     }
     
     public void play(float smoothAmp){
-        int m = millis();
         colorMode(RGB);
         background(0);
 
@@ -67,14 +66,18 @@ public class KimsVisual extends Visual{
                 if ((i + j) % 2 == 0) {
                     fill(0);
                 } else {
-                    fill(255, 204, 0);
+                    if (smoothAmp > 0.4f) {
+                        fill(100, 166, 217);
+                    } else{
+                        fill(255, 204, 0);
+                    }
                 }
                 rect(j * squareSize, i * squareSize, squareSize, squareSize);
             }
           }
         popMatrix();
         
-        if (second() % 2 == 0){
+        if (smoothAmp > 0.3f){
             bling.SlideLeft();
             bang.SlideLeft();
             bang2.SlideLeft();
