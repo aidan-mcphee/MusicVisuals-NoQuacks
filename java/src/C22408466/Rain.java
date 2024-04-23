@@ -14,11 +14,11 @@ public class Rain extends Visual
     public Rain(PGraphics g) {
         this.g = g;
         x = random(g.width);
-        y = random(-200, -100);
-        w = g.width/5;
-        h = g.height/2;
+        y = random(-20, -10);
+        w = g.width/10;
+        h = g.height;
         fallspeed = random(4, 10);
-        rainLength = random(g.width, 20);
+        rainLength = random(w, h);
 
     }
 
@@ -27,7 +27,7 @@ public class Rain extends Visual
 
         if (y > height) 
         {
-            y = random(-200, -100);
+            y = random(-200, -h);
         }
     }
 
@@ -37,6 +37,8 @@ public class Rain extends Visual
         stroke(51, 0, 51);
         line(x, y, x, y + rainLength);
 
+        //System.out.println("height " + h);
+        //System.out.println("width  " + w);
     }
 
     
