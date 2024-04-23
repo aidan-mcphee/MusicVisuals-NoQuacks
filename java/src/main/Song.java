@@ -69,7 +69,7 @@ public class Song extends Visual{
             text(text, width/2, height/2);
         }
         */
-        //Eilish.play();
+        Eilish.Starfield(getSmoothedAmplitude());
         Aidan.printVars(vars, vals);
         //Aidan.SpinningSphere(100, 100, 50);
         //Aidan.printVars(vars, vals);
