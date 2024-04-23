@@ -10,6 +10,7 @@ public class MagicCircle extends Visual {
     int circleSize;
     float rotationX;
     float smoothAmp;
+    int slowedTime;
 
     public MagicCircle(PGraphics g, float x, float y, float z, int size, float rotX) {
         this.g = g;
@@ -35,11 +36,12 @@ public class MagicCircle extends Visual {
     private void drawGlowingCircle() {
         g.noStroke();
 
-        g.fill(millis() % 255, 171, 252);
+        slowedTime = millis()/5;
+        g.fill(bouncingModulus((int) random(slowedTime - 40, slowedTime + 40), 255), 171, 252);
         g.ellipse(0, 0, circleSize * 1.2f, circleSize * 1.2f);
-        g.fill(millis() % 255, 3, 252);
+        g.fill(bouncingModulus((int) random(slowedTime - 40, slowedTime + 40), 255), 3, 252);
         g.ellipse(0, 0, circleSize * 1.1f, circleSize * 1.1f);
-        g.fill(millis() % 255, 240, 255);
+        g.fill(bouncingModulus((int)random(slowedTime - 40, slowedTime + 40), 255), 240, 255);
         g.ellipse(0, 0, circleSize, circleSize);
 
         drawMagicEffects();
@@ -47,14 +49,14 @@ public class MagicCircle extends Visual {
         g.ellipse(0, 0, circleSize * 0.9f, circleSize * 0.9f);
         g.ellipse(0, 0, circleSize * 0.8f, circleSize * 0.8f);
 
-        g.fill(millis() % 255, 171, 252);
+        g.fill(bouncingModulus((int) random(slowedTime - 40, slowedTime + 40), 255), 171, 252);
         g.ellipse(0, 0, circleSize * 0.6f, circleSize * 0.6f);
-        g.fill(millis() % 255, 3, 252);
+        g.fill(bouncingModulus((int) random(slowedTime - 40, slowedTime + 40), 255), 3, 252);
         g.ellipse(0, 0, circleSize * 0.5f, circleSize * 0.5f);
 
-        g.fill(millis() % 255, 171, 252);
+        g.fill(bouncingModulus((int) random(slowedTime - 40, slowedTime + 40), 255), 171, 252);
         g.ellipse(0, 0, circleSize * 0.3f, circleSize * 0.3f);
-        g.fill(millis() % 255, 3, 252);
+        g.fill(bouncingModulus((int) random(slowedTime - 40, slowedTime + 40), 255), 3, 252);
         g.ellipse(0, 0, circleSize * 0.2f, circleSize * 0.2f);
 
 
@@ -65,7 +67,7 @@ public class MagicCircle extends Visual {
         float angleStep = 15; 
         float arcRadius = circleSize / 2;
     
-        float maxAmplitudeHeight = 800; 
+        float maxAmplitudeHeight = 500; 
     
         for (float angle = 0; angle < 360; angle += angleStep) {
             float x1 = cos(radians(angle)) * arcRadius;
@@ -84,8 +86,14 @@ public class MagicCircle extends Visual {
             g.line(x1, y1, 0, x2, y2, z2);
         }
     }
-    
-    
+
+    private int bouncingModulus(int x, int m){
+        if (x/m % 2 == 0) {
+            return x % m;
+        } else{
+            return m - (x % m);
+        }
+    }
      
     
 }

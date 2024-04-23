@@ -35,10 +35,14 @@ public class Song extends Visual{
         PFont font = createFont("fonts/Cabazon.otf", 200);
         PFont calibri = createFont("fonts/calibri-regular.ttf", 100);
         //pg = createGraphics(1600, 900, P3D);
-
+        
+        float aspectRatio = 1516.0f / 1020.0f;
+        int newWidth = 350;
+        int newHeight = (int)(newWidth / aspectRatio);
         for(int i = 0; i < stickman.length; i++){
             String filename = "Stickman_dance/frame" + i + ".png";
             stickman[i] = loadImage(filename);
+            stickman[i].resize(newWidth, newHeight);
         }
 
         c = new Controller(this);
@@ -70,7 +74,7 @@ public class Song extends Visual{
         }
         */
         //Eilish.play();
-        Aidan.printVars(vars, vals);
+        //Aidan.printVars(vars, vals);
         //Aidan.SpinningSphere(100, 100, 50);
         //Aidan.printVars(vars, vals);
         //Jana.drawTerrain(getSmoothedAmplitude());
