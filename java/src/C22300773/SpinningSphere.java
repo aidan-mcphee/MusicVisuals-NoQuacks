@@ -27,6 +27,6 @@ public class SpinningSphere extends Visual {
         rotateZ(currangle);
         sphere(r);
         popMatrix();
-        pointLight(255, 0, 0, x, y, z);
+        //pointLight(255, 0, 0, x, y, z);
     }
 }
