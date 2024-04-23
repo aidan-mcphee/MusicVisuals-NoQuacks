@@ -11,10 +11,10 @@ public class SpinningSquares extends Visual{
         frameRate = 60;
     }
 
-    public void drawSquares() {
+    public void drawSquares(int frameCount) {
+        pushMatrix();
         translate(100, 100);
         aspeed = ((float)frameCount / 360) * TWO_PI;
-
         noFill();
         strokeWeight(2);
         stroke(50);
@@ -30,6 +30,7 @@ public class SpinningSquares extends Visual{
             popMatrix();
             }
         }
+        popMatrix();
     }
 }
 

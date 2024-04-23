@@ -56,8 +56,8 @@ public class Song extends Visual{
 
     private void playMusicVideo() {
         //Aidan.SpinningSphere(width, height, 1.0f);
-        String[] vars = {"Width", "height", "Amplitude"};
-        String[] vals = {Integer.toString(width), Integer.toString(height), Float.toString(getSmoothedAmplitude())};
+        String[] vars = {"Width", "height", "Amplitude", "Frame Count"};
+        String[] vals = {Integer.toString(width), Integer.toString(height), Float.toString(getSmoothedAmplitude()), Integer.toString(frameCount)};
         //Kim.play();
         //Subtitle sub = sr.getCurrentSubtitle(getAudioPlayer().position() / 1000);
         /* 
