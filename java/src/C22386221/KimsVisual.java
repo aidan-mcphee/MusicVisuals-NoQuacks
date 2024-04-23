@@ -44,7 +44,7 @@ public class KimsVisual extends Visual{
         magicCircle = new MagicCircle(this.g, w / 2, h / 2 + 50, -100, 300, PI / 3);
     }
     
-    public void play(){
+    public void play(float smoothAmp){
         int m = millis();
         colorMode(RGB);
         //background(m % 255);
@@ -65,6 +65,7 @@ public class KimsVisual extends Visual{
             rBang2.SlideRight();
         }
 
+        magicCircle.setAmplitude(smoothAmp);
         magicCircle.render();
 
         //stickman.render();
