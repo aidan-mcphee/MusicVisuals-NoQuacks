@@ -42,7 +42,7 @@ public class EilishsVisual extends Visual
         for (int i = 0; i < stars.length; i++) 
         {
             stars[i].setAmplitude(smoothAmp);
-            stars[i].update();
+            stars[i].updateSlow();
             stars[i].renderPurple();
             
         }
@@ -50,7 +50,7 @@ public class EilishsVisual extends Visual
         popMatrix();
     }
 
-    public void Beams()
+    public void Beams(float smoothAmp)
     {
         colorMode(RGB);
         background(255, 213, 0);

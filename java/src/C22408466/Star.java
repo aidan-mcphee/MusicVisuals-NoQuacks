@@ -36,8 +36,21 @@ public class Star extends Visual
             z = g.width;
             x = random(-g.width, g.width);
             y = random(-g.height, g.height);
-            // pz = z; // takes away extra lines
         }
+    }
+    
+    public void updateSlow() 
+    {
+        float maxAmpSpeed = 60;
+        starSpeed = map(smoothAmp, 0, 1, 0, maxAmpSpeed);
+        z = z - starSpeed;
+        
+        if (z < 1) {
+            z = g.width;
+            x = random(-g.width, g.width);
+            y = random(-g.height, g.height);
+        }
+        //pz = z; // takes away extra lines
     }
 
     public void renderYellow() 
@@ -54,23 +67,11 @@ public class Star extends Visual
         
         pz = z;
         stroke(255, 213, 0);
-        strokeWeight(sx / 4);
+        strokeWeight(sx / 5);
         line(px, py, sx, sy); 
         
     }
     
-    public void updatePurple() 
-    {
-        float maxAmpSpeed = 60;
-        starSpeed = map(smoothAmp, 0, 1, 0, maxAmpSpeed);
-        z = z - starSpeed;
-        
-        if (z < 1) {
-            z = g.width;
-            x = random(-g.width, g.width);
-            y = random(-g.height, g.height);
-        }
-    }
     
     public void renderPurple() 
     {
@@ -90,6 +91,5 @@ public class Star extends Visual
         stroke(186, 3, 252);
         strokeWeight(starSize);
         line(px, py, sx, sy);
-    
     }
 }

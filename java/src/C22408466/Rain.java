@@ -8,6 +8,7 @@ public class Rain extends Visual
 
     float x, y;
     float fallspeed;
+    float smoothAmp;
     float rainLength;
     float w, h;
 
@@ -15,14 +16,18 @@ public class Rain extends Visual
         this.g = g;
         x = random(g.width);
         y = random(-20, -10);
-        w = g.width/10;
-        h = g.height;
-        fallspeed = random(4, 10);
-        rainLength = random(w, h);
+        fallspeed = 20;
+        rainLength = random(20, 40);
 
     }
 
+    public void setAmplitude(float amp) {
+        smoothAmp = amp;
+    }
+
     public void fall() {
+        float maxAmpFall = -h;
+        fallspeed = map(smoothAmp, 0, 1, 0, maxAmpFall);
         y = y + fallspeed;
 
         if (y > height) 
