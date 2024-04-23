@@ -5,9 +5,9 @@ import processing.core.PGraphics;
 
 public class JanasVisual extends Visual{
 
-    Terrain terrainGen;
-    SpinningSquares SpSquares;
-    DiscoTiles DiscTiles;
+    public Terrain terrainGen;
+    public SpinningSquares SpSquares;
+    public DiscoTiles DiscTiles;
 
     public JanasVisual(PGraphics g, float size) {
         this.width = g.width;
