@@ -17,6 +17,7 @@ public class Song extends Visual{
     SubtitleReader sr;
     Controller c;
     PImage[] stickman = new PImage[32];
+    PImage[] stickmanBig = new PImage[32];
     PFont Cabazon;
     PFont Calibri;
 
@@ -48,9 +49,17 @@ public class Song extends Visual{
             stickman[i].resize(newWidth, newHeight);
         }
 
+        int newWidth2 = 550;
+        int newHeight2 = (int)(newWidth2 / aspectRatio);
+        for(int i = 0; i < stickmanBig.length; i++){
+            String filename = "Stickman_dance/frame" + i + ".png";
+            stickmanBig[i] = loadImage(filename);
+            stickmanBig[i].resize(newWidth2, newHeight2);
+        }
+
         c = new Controller(this);
 
-        Kim = new KimsVisual(this.g, Cabazon, stickman);
+        Kim = new KimsVisual(this.g, Cabazon, stickman, stickmanBig);
         Eilish = new EilishsVisual(this.g);
         Aidan = new AidansVisual(this.g, Calibri);
         Jana = new JanasVisual(this.g, 0.8f);
