@@ -35,8 +35,10 @@ public class Song extends Visual{
         
         startMinim();
         loadAudio("data/Creepy Nuts - Bling-Bang-Bang-Born.mp3");
+        System.out.println("Finished loading audio");
         Cabazon = createFont("fonts/Cabazon.otf", 200);
         Calibri = createFont("fonts/calibri-regular.ttf", 100);
+        System.out.println("Finished loading fonts");
         //pg = createGraphics(1600, 900, P3D);
         
         float aspectRatio = 1516.0f / 1020.0f;
@@ -47,6 +49,7 @@ public class Song extends Visual{
             stickman[i] = loadImage(filename);
             stickman[i].resize(newWidth, newHeight);
         }
+        System.out.println("Finished loading stickmanA");
 
         int newWidth2 = 550;
         int newHeight2 = (int)(newWidth2 / aspectRatio);
@@ -55,7 +58,7 @@ public class Song extends Visual{
             stickmanBig[i] = loadImage(filename);
             stickmanBig[i].resize(newWidth2, newHeight2);
         }
-        
+        System.out.println("Finished loading stickmanB");
         c = new Controller(this);
         
         Kim = new KimsVisual(this.g, Cabazon, stickman, stickmanBig);
@@ -63,6 +66,7 @@ public class Song extends Visual{
         Aidan = new AidansVisual(this.g, Calibri);
         Jana = new JanasVisual(this.g, 0.8f);
         sr = new SubtitleReader("java/data/subtitles/subs.srt");
+        System.out.println("Finished loading subtitles");
         getAudioPlayer().play();
     }
     
