@@ -34,10 +34,10 @@ public class Terrain extends Visual {
     }
 
     public void drawTerrain(float amp) {
-        colorMode(RGB);
+        colorMode(HSB);
 
-        stroke(255, 250, 0);
-        strokeWeight(1);
+        stroke(10*(amp*10), 360, 360);
+        strokeWeight(2);
         noFill();
         pushMatrix();
         translate(width/2, height*0.8f); //Object of affection position

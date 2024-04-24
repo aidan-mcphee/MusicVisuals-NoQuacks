@@ -7,6 +7,7 @@ import C22363431.JanasVisual;
 import ddf.minim.AudioPlayer;
 import processing.core.PGraphics;
 import C22300773.subtitles.Subtitle;
+import processing.core.PFont;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -18,6 +19,7 @@ public class Controller {
     EilishsVisual Eilish;
     JanasVisual Jana;
     AudioPlayer aPlayer;
+    PFont Calibri;
 
     Map <String, Boolean> playing = new HashMap<String, Boolean>();
 
@@ -29,6 +31,7 @@ public class Controller {
         Aidan = new AidansVisual(song.getGraphics(), song.getFont(1));
         Eilish = new EilishsVisual(song.getGraphics());
         Jana = new JanasVisual(song.getGraphics(), 0.8f);
+        Calibri = song.getFont(0);
         
         String[] visuals = {"Kim", "Aidan1", "Eilish", "Jana", "Aidan2", "Eilish2", "Jana2", "Jana3"};
 
@@ -107,13 +110,18 @@ public class Controller {
             s = s.concat("Eilish2");
         }
         if (playing.get("Jana2")) {
-            Jana.SpSquares.drawSquares(smoothedAmplitude);
+            Jana.SpSquares.drawSquares(smoothedAmplitude,song.getAmplitude());
             s = s.concat("Jana2");
         }
         if (playing.get("Jana3")) {
             Jana.terrainGen.drawTerrain(smoothedAmplitude);
             s = s.concat("Jana3");
         }
+        g.colorMode(song.RGB);
+        g.fill(255, 255, 255);
+        g.stroke(255, 255, 255);
+        g.textSize(24);
+        g.textFont(song.getFont(1));
         if (playing.get("Aidan2")) {
             Subtitle sub = song.sr.getCurrentSubtitle(song.getAudioPlayer().position() / 1000);
         
@@ -126,10 +134,6 @@ public class Controller {
             s = s.concat("Aidan2");
         }
         g.colorMode(g.RGB);
-        g.fill(255, 255, 255);
-        g.stroke(255, 255, 255);
-        g.textSize(24);
-        g.textFont(song.getFont(1));
         g.textAlign(g.LEFT, g.TOP);
         g.text(s, 0, 0);
     }
