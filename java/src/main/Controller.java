@@ -7,6 +7,7 @@ import C22363431.JanasVisual;
 import ddf.minim.AudioPlayer;
 import processing.core.PGraphics;
 import C22300773.subtitles.Subtitle;
+import processing.core.PFont;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -18,6 +19,7 @@ public class Controller {
     EilishsVisual Eilish;
     JanasVisual Jana;
     AudioPlayer aPlayer;
+    PFont Calibri;
 
     Map <String, Boolean> playing = new HashMap<String, Boolean>();
 
@@ -29,6 +31,7 @@ public class Controller {
         Aidan = new AidansVisual(song.getGraphics(), song.getFont(1));
         Eilish = new EilishsVisual(song.getGraphics());
         Jana = new JanasVisual(song.getGraphics(), 0.8f);
+        Calibri = song.getFont(0);
         
         String[] visuals = {"Kim", "Aidan1", "Eilish", "Jana", "Aidan2", "Eilish2", "Jana2", "Jana3"};
 
