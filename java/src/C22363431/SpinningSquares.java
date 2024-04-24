@@ -17,21 +17,20 @@ public class SpinningSquares extends Visual{
     }
     
 
-    public void drawSquares(float amp) {
+    public void drawSquares(float amp, float unsmoothAmp) {
         colorMode(HSB);
         rectMode(CORNER);
         aspeed = (100*amp / 360) * TWO_PI;
  
         noStroke();
-        //System.out.println(aspeed);
         for (int y = 0; y <= height; y += 200) {
             for (int x = 0; x <= width; x += 200) {
                 fill(currentHue, 360, 360);
-                if (aspeed > 0.9f && !peak) {
+                if (unsmoothAmp > 0.6f && !peak) {
                     currentHue = (currentHue + 30) % 255;
                     peak = true;
                 }
-                else if (aspeed < 0.3f) {
+                else if (unsmoothAmp < 0.35f) {
                     peak = false;
                 }
 
