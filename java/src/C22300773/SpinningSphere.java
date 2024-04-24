@@ -13,6 +13,7 @@ public class SpinningSphere extends Visual {
     }
 
     public void drawSphere(float w, float h, float amplitude, float x, float y, float z) {
+        strokeWeight(1);
         pushMatrix();
         translate(x, y, z);
         stroke(sphereHue, 255, 255);
