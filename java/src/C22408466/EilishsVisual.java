@@ -62,13 +62,6 @@ public class EilishsVisual extends Visual
             rain[i].render();
         }
 
-        /*for (int i = 0; i < rain.length; i++) 
-        {
-            rain[i].setAmplitude(smoothAmp);
-            rain[i].fall();
-            rain[i].renderThin();
-        }*/
-
         popMatrix();
     }
 }

@@ -10,16 +10,16 @@ public class Rain extends Visual
     float fallspeed;
     float smoothAmp;
     float rainLength;
-    float sy;
-    float h;
+    float size;
 
     public Rain(PGraphics g) {
         this.g = g;
         x = random(g.width);
-        y = random(5, -h);
-        fallspeed = random(15, 30);
-        rainLength = random(g.width / 40, g.height / 20);
+        y = random(-g.height, 5);
         this.height = g.height;
+        fallspeed = random(15, 30);
+        rainLength = random(g.width / 40, g.height / 5);
+        size = random(5, 30);
     }
 
     public void setAmplitude(float amp) {
@@ -29,11 +29,10 @@ public class Rain extends Visual
     public void fall() {
 
         y = y + (fallspeed * (smoothAmp * 3));
-        //float sy = y + (fallspeed * smoothAmp);
 
         if (y > height) 
         {
-            y = random(10, -h);
+            y = random(10, -g.height);
         }
     }
 
@@ -41,21 +40,22 @@ public class Rain extends Visual
 
         colorMode(RGB);
 
-        stroke(186, 3, 252);
-        strokeWeight(g.width / 100);
+        // outer layer
+        stroke(254, 173, 255);
+        strokeWeight(size);
         line(x, y, x, y + rainLength);
 
+        // middle layer
+        stroke(214, 102, 255);
+        strokeWeight(size / 1.5f);
+        line(x, y, x, y + rainLength);
+
+        // inner layer
+        stroke(89, 2, 98);
+        strokeWeight(size / 4f);
+        line(x, y, x, y + rainLength);
+
+
     }
-
-    /*public void renderThin() {
-
-        colorMode(RGB);
-
-        stroke(186, 3, 252);
-        strokeWeight(g.width / 400);
-        line(x, sy, x, sy + rainLength);
-
-    }*/
-
     
 }
