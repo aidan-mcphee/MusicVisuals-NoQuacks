@@ -34,8 +34,8 @@ public class Subtitle extends Song {
      * @param time the time to check
      * @return -1 if the time is before the subtitle, 0 if the time is within the subtitle, 1 if the time is after the subtitle
     */
-    public float isTime(float time) {
-        return time < startTime ? -1 : time > endTime ? 1 : 0;
+    public float isTime(float time, float offset) {
+        return time < startTime - offset ? -1 : time > endTime - offset ? 1 : 0;
     }
 
     public int getId() {

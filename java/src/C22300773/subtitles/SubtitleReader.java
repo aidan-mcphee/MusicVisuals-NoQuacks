@@ -12,6 +12,7 @@ public class SubtitleReader {
     ArrayList<Subtitle> subtitles;
     Scanner fileReader;
     int lineNumber = 0;
+    float offset = 0.3f;
 
     public SubtitleReader(String filename) {
         subtitles = new ArrayList<Subtitle>();
@@ -47,17 +48,10 @@ public class SubtitleReader {
 
     public Subtitle getCurrentSubtitle(float time) {
         for (Subtitle subtitle : subtitles) {
-            if (subtitle.isTime(time) == 0) {
+            if (subtitle.isTime(time, offset) == 0) {
                 return subtitle;
             }
         }
         return null;
-    }
-
-    public static void main(String[] args) {
-        SubtitleReader sr = new SubtitleReader("java/data/subtitles/subs.srt");
-        for (Subtitle subtitle : sr.subtitles) {
-            subtitle.print();
-        }
     }
 }
