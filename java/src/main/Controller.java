@@ -47,10 +47,10 @@ public class Controller {
                 }
                 break;
             case Song.LEFT:
-                movePosition(-500);
+                movePosition(-2000);
                 break;
             case Song.RIGHT:
-                movePosition(500);
+                movePosition(2000);
                 break;
             case '1':
                 swap("Kim");
