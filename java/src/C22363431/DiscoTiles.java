@@ -28,7 +28,7 @@ public class DiscoTiles extends Visual {
 
         for (int x = 0; x < cols; x++) {
             for (int y = 0; y < rows; y++) {
-                tiles[x][y] = random(60);  // Random hue from 0 to 360
+                tiles[x][y] = random(50);  // Random hue from 0 to 360
             }
         }
     }
@@ -40,14 +40,13 @@ public class DiscoTiles extends Visual {
         for (int x = 0; x < cols; x++) {
             for(int y = 0; y < rows; y++) {
                 noStroke();
-                fill(tiles[x][y], 360, 360);  // Set color based on hue and amplitude
+                fill(tiles[x][y]*amp, 200, 200);  
                 rect(x*(width/cols), y*(height/rows),(width/cols),(height/rows));
 
-                // Update hue to change color over time
-                tiles[x][y] += 1;  // Increment hue
+                tiles[x][y] += 1; 
 
-                if (tiles[x][y] >= 70) {
-                    tiles[x][y] = 0;  // Reset hue if it goes over 360
+                if (tiles[x][y] >= 60) {
+                    tiles[x][y] = 0;    
                     }
             }
         }

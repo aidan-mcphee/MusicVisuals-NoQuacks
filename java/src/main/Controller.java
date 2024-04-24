@@ -78,7 +78,6 @@ public class Controller {
                 swap("Jana3");
                 break;
             default:
-                System.out.println("Unkown key: " + keyCode);
                 break;
         }
     }
@@ -103,17 +102,6 @@ public class Controller {
             Jana.DiscTiles.drawTiles(smoothedAmplitude);
             s = s.concat("Jana");
         }
-        if (playing.get("Aidan2")) {
-            Subtitle sub = song.sr.getCurrentSubtitle(song.getAudioPlayer().position() / 1000);
-        
-            if (sub != null) {
-                String text = sub.getText();
-                g.textAlign(Song.CENTER, Song.CENTER);
-                g.textSize(64);
-                g.text(text, g.width/2, g.height - 100);
-            }
-            s = s.concat("Aidan2");
-        }
         if (playing.get("Eilish2")) {
             Eilish.Beams(smoothedAmplitude);
             s = s.concat("Eilish2");
@@ -125,6 +113,17 @@ public class Controller {
         if (playing.get("Jana3")) {
             Jana.terrainGen.drawTerrain(smoothedAmplitude);
             s = s.concat("Jana3");
+        }
+        if (playing.get("Aidan2")) {
+            Subtitle sub = song.sr.getCurrentSubtitle(song.getAudioPlayer().position() / 1000);
+        
+            if (sub != null) {
+                String text = sub.getText();
+                g.textAlign(Song.CENTER, Song.CENTER);
+                g.textSize(64);
+                g.text(text, g.width/2, g.height - 100);
+            }
+            s = s.concat("Aidan2");
         }
         g.colorMode(g.RGB);
         g.fill(255, 255, 255);
