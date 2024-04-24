@@ -24,7 +24,7 @@ public class Controller {
     public Controller(Song song){
         this.song = song;
 
-        Kim = new KimsVisual(song.getGraphics(), song.getFont(0), song.getStickman(0));
+        Kim = new KimsVisual(song.getGraphics(), song.getFont(0), song.getStickman(0), song.getStickman(1));
         Aidan = new AidansVisual(song.getGraphics(), song.getFont(1));
         Eilish = new EilishsVisual(song.getGraphics());
         Jana = new JanasVisual(song.getGraphics(), 0.8f);

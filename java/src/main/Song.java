@@ -78,7 +78,7 @@ public class Song extends Visual{
         if (i == 0) {
             return stickman;
         } else {
-            return null;
+            return stickmanBig;
         }
     }
 
