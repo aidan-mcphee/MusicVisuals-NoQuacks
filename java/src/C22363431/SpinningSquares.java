@@ -19,13 +19,9 @@ public class SpinningSquares extends Visual{
 
     public void drawSquares(float amp) {
         colorMode(HSB);
-        pushMatrix();
+        rectMode(CORNER);
         aspeed = (100*amp / 360) * TWO_PI;
-
-        //float hueIncrement1 = (70-0) / (height / 200 + 1); 
-        //float hueIncrement2 = (300-255) / (height / 200 + 1);
  
-
         noStroke();
         //System.out.println(aspeed);
         for (int y = 0; y <= height; y += 200) {
@@ -38,6 +34,7 @@ public class SpinningSquares extends Visual{
                 else if (aspeed < 0.3f) {
                     peak = false;
                 }
+
             float size2 = map(cos(-aspeed+x*49+y*2), -1, 1, -50, 50);
             pushMatrix();
             translate(x, y);
@@ -47,7 +44,6 @@ public class SpinningSquares extends Visual{
             popMatrix();
             }
         }
-        popMatrix();
     }
 }
 
