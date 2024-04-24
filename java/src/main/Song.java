@@ -35,7 +35,6 @@ public class Song extends Visual{
         
         startMinim();
         loadAudio("data/Creepy Nuts - Bling-Bang-Bang-Born.mp3");
-        getAudioPlayer().play();
         Cabazon = createFont("fonts/Cabazon.otf", 200);
         Calibri = createFont("fonts/calibri-regular.ttf", 100);
         //pg = createGraphics(1600, 900, P3D);
@@ -56,16 +55,17 @@ public class Song extends Visual{
             stickmanBig[i] = loadImage(filename);
             stickmanBig[i].resize(newWidth2, newHeight2);
         }
-
+        
         c = new Controller(this);
-
+        
         Kim = new KimsVisual(this.g, Cabazon, stickman, stickmanBig);
         Eilish = new EilishsVisual(this.g);
         Aidan = new AidansVisual(this.g, Calibri);
         Jana = new JanasVisual(this.g, 0.8f);
         sr = new SubtitleReader("java/data/subtitles/subs.srt");
+        getAudioPlayer().play();
     }
-
+    
     public PFont getFont(int i){
         if(i == 0){
             return Cabazon;
