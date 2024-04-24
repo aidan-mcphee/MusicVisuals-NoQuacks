@@ -63,7 +63,6 @@ public class Song extends Visual{
         Aidan = new AidansVisual(this.g, Calibri);
         Jana = new JanasVisual(this.g, 0.8f);
         sr = new SubtitleReader("java/data/subtitles/subs.srt");
-        getAudioPlayer().play();
     }
     
     public PFont getFont(int i){
