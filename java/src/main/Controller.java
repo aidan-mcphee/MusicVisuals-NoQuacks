@@ -17,13 +17,14 @@ public class Controller {
     AidansVisual Aidan;
     EilishsVisual Eilish;
     JanasVisual Jana;
+    AudioPlayer aPlayer;
 
     Map <String, Boolean> playing = new HashMap<String, Boolean>();
 
 
     public Controller(Song song){
         this.song = song;
-
+        aPlayer = song.getAudioPlayer();
         Kim = new KimsVisual(song.getGraphics(), song.getFont(0), song.getStickman(0), song.getStickman(1));
         Aidan = new AidansVisual(song.getGraphics(), song.getFont(1));
         Eilish = new EilishsVisual(song.getGraphics());
@@ -136,7 +137,7 @@ public class Controller {
     }
  
     public void movePosition(int ms) {
-        AudioPlayer aPlayer = song.getAudioPlayer();
+        
         aPlayer.skip(ms);
     }
 }
