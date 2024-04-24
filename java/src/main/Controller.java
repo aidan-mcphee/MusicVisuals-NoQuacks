@@ -30,7 +30,7 @@ public class Controller {
         Eilish = new EilishsVisual(song.getGraphics());
         Jana = new JanasVisual(song.getGraphics(), 0.8f);
         
-        String[] visuals = {"Kim", "Aidan1", "Eilish", "Jana", "Aidan2", "Eilish2", "Jana2"};
+        String[] visuals = {"Kim", "Aidan1", "Eilish", "Jana", "Aidan2", "Eilish2", "Jana2", "Jana3"};
 
         for (String keyString : visuals) {
             playing.put(keyString, false);
@@ -73,6 +73,9 @@ public class Controller {
                 break;
             case '7':
                 swap("Jana2");
+                break;
+            case '8':
+                swap("Jana3");
                 break;
             default:
                 System.out.println("Unkown key: " + keyCode);
@@ -118,6 +121,10 @@ public class Controller {
         if (playing.get("Jana2")) {
             Jana.SpSquares.drawSquares(smoothedAmplitude);
             s = s.concat("Jana2");
+        }
+        if (playing.get("Jana3")) {
+            Jana.terrainGen.drawTerrain(smoothedAmplitude);
+            s = s.concat("Jana3");
         }
         g.colorMode(g.RGB);
         g.fill(255, 255, 255);
