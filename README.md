@@ -14,9 +14,15 @@
 - There is an example visualiser called MyVisual in the example package
 - Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
 
+
 # Description of the assignment
+ We made an audio visualiser to the song "Bling Blang Bang Born" by Creepy Nuts, using the various coding techniques we have learned in our Object Oriented Programming module for visualisations.
 
 # Instructions
+- Fork this repository and run the main file.
+- To see the different viualisations of our group, use the *number keys: 1-8*
+- To pause the song and visualisation use *spacebar*
+- To fast forward or rewind the song use the arrow keys *left: rewind* and *right: fast forward*
 
 # How it works
 
