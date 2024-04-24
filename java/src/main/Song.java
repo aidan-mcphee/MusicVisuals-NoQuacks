@@ -17,37 +17,69 @@ public class Song extends Visual{
     SubtitleReader sr;
     Controller c;
     PImage[] stickman = new PImage[32];
+    PImage[] stickmanBig = new PImage[32];
+    PFont Cabazon;
+    PFont Calibri;
 
     public void settings(){
-        size(1920, 1080, P3D);
+        //size(1920, 1080, P3D);
+        fullScreen(P3D);
     }
     
     public void setup()
     {
         //super.setup();
         colorMode(HSB);
-        setFrameSize(1024);
+        //setFrameSize(1024);
         frameRate(30);
         
         startMinim();
         loadAudio("data/Creepy Nuts - Bling-Bang-Bang-Born.mp3");
-        getAudioPlayer().play();
-        PFont font = createFont("fonts/Cabazon.otf", 200);
-        PFont calibri = createFont("fonts/calibri-regular.ttf", 100);
+        Cabazon = createFont("fonts/Cabazon.otf", 200);
+        Calibri = createFont("fonts/calibri-regular.ttf", 100);
         //pg = createGraphics(1600, 900, P3D);
-
+        
+        float aspectRatio = 1516.0f / 1020.0f;
+        int newWidth = 350;
+        int newHeight = (int)(newWidth / aspectRatio);
         for(int i = 0; i < stickman.length; i++){
             String filename = "Stickman_dance/frame" + i + ".png";
             stickman[i] = loadImage(filename);
+            stickman[i].resize(newWidth, newHeight);
         }
 
+        int newWidth2 = 550;
+        int newHeight2 = (int)(newWidth2 / aspectRatio);
+        for(int i = 0; i < stickmanBig.length; i++){
+            String filename = "Stickman_dance/frame" + i + ".png";
+            stickmanBig[i] = loadImage(filename);
+            stickmanBig[i].resize(newWidth2, newHeight2);
+        }
+        
         c = new Controller(this);
-
-        Kim = new KimsVisual(this.g, font, stickman);
+        
+        Kim = new KimsVisual(this.g, Cabazon, stickman, stickmanBig);
         Eilish = new EilishsVisual(this.g);
-        Aidan = new AidansVisual(this.g, calibri);
+        Aidan = new AidansVisual(this.g, Calibri);
         Jana = new JanasVisual(this.g, 0.8f);
         sr = new SubtitleReader("java/data/subtitles/subs.srt");
+        getAudioPlayer().play();
+    }
+    
+    public PFont getFont(int i){
+        if(i == 0){
+            return Cabazon;
+        }else{
+            return Calibri;
+        }
+    }
+
+    public PImage[] getStickman(int i){
+        if (i == 0) {
+            return stickman;
+        } else {
+            return stickmanBig;
+        }
     }
 
     public void keyPressed() {
@@ -56,26 +88,28 @@ public class Song extends Visual{
 
     private void playMusicVideo() {
         //Aidan.SpinningSphere(width, height, 1.0f);
-        String[] vars = {"Width", "height", "Amplitude"};
-        String[] vals = {Integer.toString(width), Integer.toString(height), Float.toString(getSmoothedAmplitude())};
+        //String[] vars = {"Width", "height", "Amplitude"};
+        //String[] vals = {Integer.toString(width), Integer.toString(height), Float.toString(getSmoothedAmplitude())};
 
 
         //Subtitle sub = sr.getCurrentSubtitle(getAudioPlayer().position() / 1000);
-        /* 
+        /*
         if (sub != null) {
             St  ring text = sub.getText();
             textAlign(CENTER, CENTER);
             textSize(64);
             text(text, width/2, height/2);
         }
-        */
-        //Eilish.Starfield(getSmoothedAmplitude());
-        Eilish.Beams(getSmoothedAmplitude());
+         */
+        //Eilish.play();
         //Aidan.printVars(vars, vals);
         //Aidan.SpinningSphere(100, 100, 50);
-        Aidan.printVars(vars, vals);
+        //Aidan.printVars(vars, vals);
+        //Aidan.SpinningSphere(100, 100, 50);
+        //Aidan.printVars(vars, vals);
         //Kim.play(getSmoothedAmplitude());
         //Jana.play(getSmoothedAmplitude());
+        c.controlVisual();
     }
     
     public void draw() {

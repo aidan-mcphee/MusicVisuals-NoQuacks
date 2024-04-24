@@ -10,15 +10,16 @@ public class Rain extends Visual
     float fallspeed;
     float smoothAmp;
     float rainLength;
-    float w, h;
+    float sy;
+    float h;
 
     public Rain(PGraphics g) {
         this.g = g;
         x = random(g.width);
-        y = random(-20, -10);
-        fallspeed = 20;
-        rainLength = random(20, 40);
-
+        y = random(5, -h);
+        fallspeed = random(15, 30);
+        rainLength = random(g.width / 40, g.height / 20);
+        this.height = g.height;
     }
 
     public void setAmplitude(float amp) {
@@ -26,25 +27,35 @@ public class Rain extends Visual
     }
 
     public void fall() {
-        float maxAmpFall = -h;
-        fallspeed = map(smoothAmp, 0, 1, 0, maxAmpFall);
-        y = y + fallspeed;
+
+        y = y + (fallspeed * (smoothAmp * 3));
+        //float sy = y + (fallspeed * smoothAmp);
 
         if (y > height) 
         {
-            y = random(-200, -h);
+            y = random(10, -h);
         }
     }
 
     public void render() {
+
         colorMode(RGB);
 
-        stroke(51, 0, 51);
+        stroke(186, 3, 252);
+        strokeWeight(g.width / 100);
         line(x, y, x, y + rainLength);
 
-        //System.out.println("height " + h);
-        //System.out.println("width  " + w);
     }
+
+    /*public void renderThin() {
+
+        colorMode(RGB);
+
+        stroke(186, 3, 252);
+        strokeWeight(g.width / 400);
+        line(x, sy, x, sy + rainLength);
+
+    }*/
 
     
 }

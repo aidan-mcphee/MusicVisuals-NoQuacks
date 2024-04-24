@@ -27,7 +27,6 @@ public class EilishsVisual extends Visual
     public void Starfield(float smoothAmp) 
     {
         colorMode(RGB);
-        background(0);
         pushMatrix();
         translate(g.width / 2, g.height / 2);
 
@@ -58,9 +57,17 @@ public class EilishsVisual extends Visual
 
         for (int i = 0; i < rain.length; i++) 
         {
+            rain[i].setAmplitude(smoothAmp);
             rain[i].fall();
             rain[i].render();
         }
+
+        /*for (int i = 0; i < rain.length; i++) 
+        {
+            rain[i].setAmplitude(smoothAmp);
+            rain[i].fall();
+            rain[i].renderThin();
+        }*/
 
         popMatrix();
     }

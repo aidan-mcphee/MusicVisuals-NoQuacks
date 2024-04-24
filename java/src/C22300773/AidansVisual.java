@@ -1,41 +1,32 @@
 package C22300773;
 
+import C22300773.particlesystem.ParticleSystem;
 import ie.tudublin.Visual;
 import main.Song;
 import processing.core.PFont;
 import processing.core.PGraphics;
-
+import processing.core.PVector;
 
 public class AidansVisual extends Visual{
 
-    int sphereHue = 0;
-    float currangle = 0;
     Song s;
     float y;
     PFont font;
+    SpinningSphere sphere;
+    ParticleSystem ps;
 
     public AidansVisual(PGraphics g, PFont font) {
         this.g = g;
         this.font = font;
         height = g.height;
         width = g.width;
+        sphere = new SpinningSphere(g);
+        ps = new ParticleSystem(new PVector(width / 2, height / 2), g, height / 4);
+        for (int i = 0; i < 40; i++) {
+            ps.addParticle();
+        }
     }
 
-    public void SpinningSphere(float w, float h, float amplitude) {
-        pushMatrix();
-        translate(w*0.5f, h*0.35f, -640f);
-        if (frameCount % 60 == 0) {
-            sphereHue = (sphereHue + 50) % 255;
-        }
-        noFill();
-        stroke(sphereHue, 255, 255);
-        float r = map(amplitude, 0, 1, h/5, h/2);
-        float angle = TWO_PI * 0.1f * amplitude;
-        currangle += angle;
-        rotateZ(currangle);
-        sphere(r);
-        popMatrix();
-    }
     public void printVars(String[] names, String[] variables) {
         assert (names.length == variables.length);
         colorMode(RGB);
@@ -66,5 +57,10 @@ public class AidansVisual extends Visual{
             text(names[i] + ": " + variables[i], 0, y);
             y += fontSize;
         }
+    }
+
+    public void render(float smoothAmp) {
+        sphere.drawSphere(width / 2, height / 2, smoothAmp, width / 2, height / 2, -640);
+        ps.run(smoothAmp);
     }
 }

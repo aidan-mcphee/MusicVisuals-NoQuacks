@@ -27,7 +27,7 @@ public class SpinningSquares extends Visual{
  
 
         noStroke();
-        System.out.println(aspeed);
+        //System.out.println(aspeed);
         for (int y = 0; y <= height; y += 200) {
             for (int x = 0; x <= width; x += 200) {
                 fill(currentHue, 360, 360);

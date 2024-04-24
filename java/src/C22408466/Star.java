@@ -50,7 +50,7 @@ public class Star extends Visual
             x = random(-g.width, g.width);
             y = random(-g.height, g.height);
         }
-        //pz = z; // takes away extra lines
+
     }
 
     public void renderYellow() 

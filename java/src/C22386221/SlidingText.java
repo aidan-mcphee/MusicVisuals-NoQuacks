@@ -10,6 +10,8 @@ public class SlidingText extends Visual{
     float x,y;
     float speed;
     float end;
+    float jitter, angle;
+    float startX, startY;
     
     public SlidingText(PGraphics g,String text, PFont font, float x, float y, float speed, float end){
         this.g = g;
@@ -19,6 +21,8 @@ public class SlidingText extends Visual{
         this.y = y;
         this.speed = speed;
         this.end = end;
+        this.startX = x;
+        this.startY = y;
     }
 
     public void SlideLeft(){
@@ -33,6 +37,10 @@ public class SlidingText extends Visual{
             x = end;
         }else{
             x -= speed;
+        }
+
+        if (x == end) {
+            x = startX;
         }
     }
 
@@ -49,9 +57,9 @@ public class SlidingText extends Visual{
         }else{
             x += speed;
         }
+        
+        if (x == end) {
+            x = startX;
+        }
     }
 }
-
-// TODO pass in speed variable (float), *slowly accelerate/decelerate?
-/* TODO if the x is in front of the end reduce the current x by speed, otherwise
-increase the x */
