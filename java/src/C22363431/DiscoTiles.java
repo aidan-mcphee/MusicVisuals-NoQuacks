@@ -35,7 +35,7 @@ public class DiscoTiles extends Visual {
 
     public void drawTiles(float amp) {
         colorMode(HSB);
-
+        rectMode(CORNER);
         pushMatrix();
         for (int x = 0; x < cols; x++) {
             for(int y = 0; y < rows; y++) {
