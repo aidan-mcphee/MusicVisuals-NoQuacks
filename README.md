@@ -7,28 +7,21 @@
 | C22408466 | Eilish Paseos |
 | C22363431 | Jana Sy |
 
-## Instructions
-- Fork this repository and use it a starter project for your assignment
-- Create a new package named your student number and put all your code in this package.
-- You should start by creating a subclass of ie.tudublin.Visual
-- There is an example visualiser called MyVisual in the example package
-- Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
-
-
 # Description of the assignment
 
  We made an audio visualiser to the song "Bling Blang Bang Born" by Creepy Nuts, using the various coding techniques we have learned in our Object Oriented Programming module for visualisations.
 
 # Instructions
 
-- Fork this repository and run the main file.
+- Fork this repository and run the main.java file.
 - To see the different viualisations of our group, use the *number keys: 1-8*
 - To pause the song and visualisation use *spacebar*
 - To fast forward or rewind the song use the arrow keys *left: rewind* and *right: fast forward*
 - To concatonate an effect to a certain effect press the number keys you want to display
 - You can unselect an effect by pressing the effect number key
 
-# Visualisation
+# Visualisation Assets
+
 | AssetS | Student | 
 |-----------|-----------|
 | SpinningSphere.java | C22300773 |
@@ -44,6 +37,7 @@
 | Star.java | C22408466 |
 
 # How it works
+
  Each visualisation is within the creator's corresponding student number package. We created 8 different visualisations that you are able to cycle through using corresponding keys and concatonate together using the following code in the controller.java file.
 
 ``` java
@@ -93,20 +87,38 @@ public void controlVisual() {
 ```
 
 #Screenshots
+
+###Key: 1
 ![An image](images/key1.png)
+
+###Key: 2
 ![An image](images/key2.png)
+
+###Key: 3
 ![An image](images/key3.png)
+
+###Key: 4
 ![An image](images/key4.png)
+
+###Key: 5
 ![An image](images/key5.png)
+
+###Key: 6
 ![An image](images/key6.png)
+
+###Key: 7
 ![An image](images/key7.png)
+
+###Key: 8
 ![An image](images/key8.png)
 
 # What I am most proud of in the assignment
+
 ## Aidan
 
 ## Eilish
 
+I am most proud of how the group was able to create visualisations that work well together while also being able to stick to the theme of our song. I really liked how fun this project was as a whole and am glad that my visualisations turned out well.
 ## Jana
 
 ## Kim
