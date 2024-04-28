@@ -120,7 +120,6 @@ public class Controller {
         g.colorMode(song.RGB);
         g.fill(255, 255, 255);
         g.stroke(255, 255, 255);
-        g.textSize(24);
         g.textFont(song.getFont(1));
         if (playing.get("Aidan2")) {
             Subtitle sub = song.sr.getCurrentSubtitle(song.getAudioPlayer().position() / 1000);
@@ -129,12 +128,12 @@ public class Controller {
                 String text = sub.getText();
                 g.textAlign(Song.CENTER, Song.CENTER);
                 g.textSize(64);
-                g.text(text, g.width/2, g.height - 100);
+                g.text(text, g.width/2, g.height - 50);
             }
             s = s.concat("Aidan2");
         }
-        g.colorMode(g.RGB);
-        g.textAlign(g.LEFT, g.TOP);
+        g.textAlign(song.LEFT, song.TOP);
+        g.textSize(24);
         g.text(s, 0, 0);
     }
 

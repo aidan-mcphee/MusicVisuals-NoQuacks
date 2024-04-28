@@ -115,6 +115,7 @@ public void controlVisual() {
 # What I am most proud of in the assignment
 
 ## Aidan
+I am most proud of the background work that i did on this assignment, being able to create a subtitles system, a controller for our visuals to be able to layer on top of eachother and the method of passing one singular PGraphics object between our classes to support this. I am also proud of my implementation of my sphere particle system using spherical coordinates.
 
 ## Eilish
 
