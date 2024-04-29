@@ -123,4 +123,4 @@ I am most proud of how the group was able to create visualisations that work wel
 ## Jana
 
 ## Kim
-
+I successfully modularized my design by creating three class files, each representing a specific design that I created and integrated their instances into the main visual scene. This approach significantly decluttered my visual code, eliminating the need for repetitive manual coding to instantiate each design. Instead, I optimized the process by instantiating each class within the constructor and calling them in the main draw function. I also explored different elements of processing such using PImages to create an array of images that is continuously looped in order to create a dancing stickman animation.
