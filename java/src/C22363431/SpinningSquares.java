@@ -40,6 +40,7 @@ public class SpinningSquares extends Visual{
             rotate(aspeed);
             rectMode(CENTER);
             rect(0, 0, size2*3f, size2*3f);
+            rectMode(CORNER);
             popMatrix();
             }
         }
