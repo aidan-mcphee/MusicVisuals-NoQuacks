@@ -43,7 +43,6 @@ public class Controller {
     public void handleKeyPress(int keyCode) {
         switch (keyCode) {
             case ' ':
-                AudioPlayer aPlayer = song.getAudioPlayer();
                 if (aPlayer.isPlaying()) {
                     aPlayer.pause();
                 } else {
@@ -79,6 +78,10 @@ public class Controller {
                 break;
             case '8':
                 swap("Jana3");
+                break;
+            case 'r':
+            case 'R':
+                aPlayer.rewind();
                 break;
             default:
                 break;
