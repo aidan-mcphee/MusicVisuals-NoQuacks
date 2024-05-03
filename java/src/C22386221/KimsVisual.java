@@ -46,9 +46,9 @@ public class KimsVisual extends Visual{
         rBang = new SlidingText(this.g, "Bang", font, 0, h - h/9, 200, x - 394);
         rBang2 = new SlidingText(this.g,"Bang", font, 0, h - h/9, 200, x);
 
-        stickman = new DancingStickman(this.g, w/2 + 50,h/2.5f, stickmanImg);
-        stickman2 = new DancingStickman(this.g, w/4 + 50,h/2.5f, stickmanImg);
-        stickmanBig = new DancingStickman(this.g, w/3 + 50,h/5, stickmanImg2);
+        stickman = new DancingStickman(this.g, w/2 + w/16,h/2.5f, stickmanImg);
+        stickman2 = new DancingStickman(this.g, w/4 + w/16,h/2.5f, stickmanImg);
+        stickmanBig = new DancingStickman(this.g, w/3 + w/16,h/5, stickmanImg2);
         magicCircle = new MagicCircle(this.g, w / 2, h/2  + 10, -100, 800, PI / 3);
     }
     
