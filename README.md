@@ -125,7 +125,10 @@ I am most proud of the background work that i did on this assignment, being able
 ## Eilish
 
 I am most proud of how the group was able to create visualisations that work well together while also being able to stick to the theme of our song. I really liked how fun this project was as a whole and am glad that my visualisations turned out well.
+
 ## Jana
+
+What I'm most proud of doing this assignment isn't really doing the coding bit, but working with my team to create interesting visualisations, while also having fun in the process. It's easy to get frustrated when writing code but when you have other people it gets easier. I'm proud of what we created together, even if it's unpolished, we managed to merge our ideas together that sticks to the colour theme we picked and the song we chose.
 
 ## Kim
 I successfully modularized my design by creating three class files, each representing a specific design that I created and integrated their instances into the main visual scene. This approach significantly decluttered my visual code, eliminating the need for repetitive manual coding to instantiate each design. Instead, I optimized the process by instantiating each class within the constructor and calling them in the main draw function. I also explored different elements of processing such using PImages to create an array of images that is continuously looped in order to create a dancing stickman animation.
